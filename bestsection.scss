@@ -1,0 +1,38 @@
+.best {
+    background: url(png/bestbg.png) center center /cover  no-repeat;
+
+}
+.best__title {
+font-family: 'lifehackmedium';
+font-size: 24px;
+font-weight: 500;
+line-height: 28.14px;
+letter-spacing: -0.6px;
+width: 300px;
+text-align: center;
+}
+.best__text {
+height: 62px;
+opacity: 0.8;
+color: #2f3234;
+font-family: 'ubunturegular';
+font-size: 14px;
+line-height: 24.02px;
+text-align: center;
+}
+.best__item {
+    list-style: none;
+    padding-right: 20px;
+}
+.best__list {
+    display: flex;
+}
+.title--thebest {
+    text-align: center;
+    color: #2f3234;
+    margin-top: -81px;
+}
+.best__img {
+    padding-left: 105px;
+}
+

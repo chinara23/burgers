@@ -1,3 +1,53 @@
+@font-face {
+  font-family: 'lifehackmedium';
+  src: url("fonts/lifehack_medium-webfont.woff2") format("woff2"), url("fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'gagalinregular';
+  src: url("fonts/gagalin-regular-webfont.woff2") format("woff2"), url("fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.best {
+  background: url(png/bestbg.png) center center/cover no-repeat; }
+
+.best__title {
+  font-family: 'lifehackmedium';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.14px;
+  letter-spacing: -0.6px;
+  width: 300px;
+  text-align: center; }
+
+.best__text {
+  height: 62px;
+  opacity: 0.8;
+  color: #2f3234;
+  font-family: 'ubunturegular';
+  font-size: 14px;
+  line-height: 24.02px;
+  text-align: center; }
+
+.best__item {
+  list-style: none;
+  padding-right: 20px; }
+
+.best__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.title--thebest {
+  text-align: center;
+  color: #2f3234;
+  margin-top: -81px; }
+
+.best__img {
+  padding-left: 105px; }
+
 html,
 body {
   height: 100%; }
@@ -12,8 +62,15 @@ body {
 .container {
   margin: 0 auto;
   width: 940px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 100%; }
 
@@ -33,12 +90,20 @@ body {
   min-height: 650px; }
 
 .main__container {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start; }
 
 .header {
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .navigation__link {
@@ -52,7 +117,11 @@ body {
 
 .navigation__item {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
   .navigation__item:first-child:before {
     display: none; }
@@ -68,16 +137,26 @@ body {
     margin: 0 14px; }
 
 .navigation {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-right: 28px; }
 
 .navigation__list {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 24px; }
 
 .header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
 
 .button {
@@ -94,37 +173,98 @@ body {
   text-transform: uppercase; }
 
 .main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex: .8;
+  -ms-flex: .8;
   flex: .8; }
 
 .title {
   font-family: 'gagalinregular';
-  font-size: 72px;
-  color: black;
-  margin-top: 44px; }
+  font-size: 72px; }
   .title--color_yellow {
     color: #f9b43b; }
 
 .main__subt {
   font-size: 65px;
   font-family: 'lifehackmedium';
-  color: white; }
+  color: white;
+  line-height: 60px; }
 
-@font-face {
-  font-family: 'lifehackmedium';
-  src: url("fonts/lifehack_medium-webfont.woff2") format("woff2"), url("fonts/lifehack_medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
+.reviews__list {
+  background: black;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0; }
+
+.reviews__item {
+  height: 50%;
+  width: 25%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  list-style: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .reviews__item:hover .reviews__hover {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+
+.reviews__img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.button--btn {
+  margin: 0 0 0 20px;
+  width: 110px;
+  height: 35px;
+  background-color: #2f3234;
+  line-height: 33px;
+  text-align: center; }
+
+.reviews__text {
+  width: 222px;
+  margin-left: 20px;
+  color: #ffffff;
+  font-family: 'ubunturegular';
+  font-size: 14px;
+  line-height: 24px; }
+
+.reviews__title {
+  margin-left: 20px;
+  width: 139px;
+  color: white;
   font-family: 'gagalinregular';
-  src: url("fonts/gagalin-regular-webfont.woff2") format("woff2"), url("fonts/gagalin-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+  font-size: 14px;
+  line-height: 28.11px;
+  margin-top: 40px; }
+
+.reviews__hover {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(20, 20, 20, 0.7);
+  opacity: 0;
+  visibility: hidden; }
+
 @font-face {
   font-family: 'ubunturegular';
   src: url("fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-
-/*# sourceMappingURL=main.css.map */
