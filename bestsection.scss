@@ -19,6 +19,7 @@ font-family: 'ubunturegular';
 font-size: 14px;
 line-height: 24.02px;
 text-align: center;
+
 }
 .best__item {
     list-style: none;
@@ -33,6 +34,26 @@ text-align: center;
     margin-top: -81px;
 }
 .best__img {
-    padding-left: 105px;
-}
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 200px;
+
+    &--salat {
+    background-image: url(svg/natural.svg);
+    height: 75px;
+    width: 88px;
+    }
+
+    &--hand {
+    background-image: url(svg/hand.svg);
+    height: 85px;
+    width: 73px;
+    }
+
+    &--meat {
+    background-image: url(svg/meat.svg);
+    height: 89px;
+    width: 97px;
+    }
+ }
 

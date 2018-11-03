@@ -46,7 +46,21 @@
   margin-top: -81px; }
 
 .best__img {
-  padding-left: 105px; }
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-left: 200px; }
+  .best__img--salat {
+    background-image: url(svg/natural.svg);
+    height: 75px;
+    width: 88px; }
+  .best__img--hand {
+    background-image: url(svg/hand.svg);
+    height: 85px;
+    width: 73px; }
+  .best__img--meat {
+    background-image: url(svg/meat.svg);
+    height: 89px;
+    width: 97px; }
 
 html,
 body {
@@ -224,9 +238,8 @@ body {
     transition: 1s; }
 
 .reviews__img {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  -o-object-fit: center;
+  object-fit: center; }
 
 .button--btn {
   margin: 0 0 0 20px;
