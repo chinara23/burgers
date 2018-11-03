@@ -237,10 +237,6 @@ body {
     -o-transition: 1s;
     transition: 1s; }
 
-.reviews__img {
-  -o-object-fit: center;
-  object-fit: center; }
-
 .button--btn {
   margin: 0 0 0 20px;
   width: 110px;
