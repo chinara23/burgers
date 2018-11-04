@@ -43,7 +43,8 @@
 .title--thebest {
   text-align: center;
   color: #2f3234;
-  margin-top: -81px; }
+  margin-top: -81px;
+  font-weight: 300; }
 
 .best__img {
   background-position: center;
@@ -201,13 +202,16 @@ body {
   font-family: 'gagalinregular';
   font-size: 72px; }
   .title--color_yellow {
-    color: #f9b43b; }
+    color: #f9b43b;
+    margin-bottom: -40px;
+    font-weight: 300; }
 
 .main__subt {
   font-size: 65px;
   font-family: 'lifehackmedium';
   color: white;
-  line-height: 60px; }
+  line-height: 60px;
+  font-weight: 300; }
 
 .reviews__list {
   background: black;
@@ -271,6 +275,12 @@ body {
   background: rgba(20, 20, 20, 0.7);
   opacity: 0;
   visibility: hidden; }
+
+.reviews__img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%; }
 
 @font-face {
   font-family: 'ubunturegular';
