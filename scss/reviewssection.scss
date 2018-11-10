@@ -1,0 +1,102 @@
+.reviews__list {
+    background: black;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+.reviews__item {
+    height: 50%;
+    width: 25%;
+    filter: grayscale(100%);
+    list-style: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
+    &:hover {
+        .reviews__hover {
+            opacity: 1;
+            visibility: visible;
+            transition: 1s;
+        }
+    }
+}
+.button--btn {
+ margin: 0 0 0 20px;
+width: rem(110px);
+height: rem(35px);
+background-color: #2f3234;
+line-height: rem(33px);
+text-align: center;
+@include phones{
+    display: none;
+}
+}
+.reviews__text {
+    width: rem(222px);
+    margin-left: rem(20px);
+    color: #ffffff;
+    font-family: 'ubunturegular';
+    font-size: rem(14px);
+    line-height: rem(24px);
+    @include tablets {
+        line-height: 1.2rem;
+    }
+    @include phones {
+        display: none;
+    }
+}
+.reviews__title {
+margin-left: rem(20px);
+width: rem(139px);
+color:white;
+font-family: 'gagalinregular';
+font-size: rem(14px);
+line-height: rem(28.11px);
+margin-top: rem(40px);
+ @include tablets{
+     margin-top: 0.5rem;
+     margin-left: 7.25rem;
+ }
+ @include phones {
+     font-size: 1.25rem;
+     margin-left: 0;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+ }
+}
+.reviews__hover {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(#141414, .7);
+    opacity: 0;
+    visibility: hidden;
+    @include phones{
+        text-align: center;
+    }
+}
+.reviews__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.button--read {
+    display: none;
+    background-color: #2f3234;
+    width: rem(110px);
+    height: rem(35px);
+    line-height: rem(33px);
+    padding: 0.1875rem 0rem 0rem 1rem;
+    @include phones {
+        display: block;
+    }
+}

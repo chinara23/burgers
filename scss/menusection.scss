@@ -1,0 +1,60 @@
+.menu {
+    background-image: url(png/menu.png);
+    background-size: cover;
+    display: flex;
+}
+.menu__title {
+    color: white;
+    font-family: "gagalinregular";
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-left: rem(130px);
+    @include phones {
+        margin-left:  2.125rem;
+    }
+}
+.menu__list {
+    display: flex;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+.menu__link {
+    text-decoration: none;
+    display: flex;
+    width: 5rem;
+    height: 100%;
+    background-size: cover;
+}
+.menu__item {
+    display: flex;
+}
+.menu__text {
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'gagalinregular';
+    transform: rotate(-90deg);
+}
+.menu__text--diet {
+    margin-top: rem(240px);
+    margin-left: rem(139px);
+}
+.menu__text--veg {
+    margin-top: rem(190px);
+    margin-left: rem(138px);
+}
+.menu__content {
+    transition: 1s;
+    background-color: #2f3133;
+    opacity: 0.9;
+    width: 0;
+    overflow: hidden;
+}
+.menu__subt {
+    color: #fff;
+    line-height: 1.42;
+    font-family: 'ubunturegular';
+    padding: 2.5rem;
+    padding-bottom: 0;
+    opacity: 0;
+}

@@ -1,0 +1,103 @@
+.team {
+    background-image: url(png/team.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+li {
+    list-style: none;
+}
+.team__title {
+color: #f9b43b;
+font-family: 'gagalinregular';
+font-size: rem(72px);
+font-weight: 400;
+margin-left: rem(120px);
+margin-top: 0;
+padding-top: rem(60px);
+@include tablets {
+    margin-bottom: 0;
+    margin-left: 2.5rem;
+}
+}
+.team__text {
+width: rem(208px);
+color: #ffffff;
+font-family: 'ubunturegular';
+font-size: rem(14px);
+line-height: rem(24.01px);
+}
+.team__subt {
+color: white;
+font-family: "ubunturegular";
+font-weight: 300;
+}
+.team__list {
+    margin-left: rem(100px);
+    @include tablets {
+        margin-left: 0;
+    }
+}
+.team__link {
+color: #ffffff;
+font-family: 'gagalinregular';
+font-size: rem(18px);
+line-height: rem(60.13px);
+text-decoration: none;
+position: relative;
+@include tablets {
+    display: inline-flex;
+}
+    &::before {
+        content: '';
+        display: block;
+        border: rem(6px) solid transparent;
+        border-top: rem(7px) solid #f9b43b;
+        position: absolute;
+        margin-left: rem(-23px);
+        margin-top: rem(25px);
+    }
+}
+.team__link--active { 
+    color: #f9b43b;
+}
+.team__link--before{
+    content: '';
+    display: block;
+    border: rem(4px) solid transparent;
+    border-top: rem(6px) solid #f9b43b;
+    position: absolute;
+    margin-left: rem(-18px); 
+    margin-top: rem(11px);
+}
+.team__block {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.team__section {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: #2f3234;
+    opacity: 0.93;
+    left: 50%;
+    @include tablets {
+        left:0;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.team__text-block {
+    margin-left: rem(25px);
+    width: rem(208px);
+    margin-top: rem(-20px);
+}

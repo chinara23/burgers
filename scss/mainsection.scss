@@ -1,0 +1,129 @@
+
+ .main {
+     background:url(png/burgersmain.png);
+     background-size: cover;
+ }
+ .section {
+     height: 100vh;
+     min-height: 650px;
+ }
+ .main__container {
+    justify-content: flex-start;
+ }
+ .header {
+     margin-top: rem(10px);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .navigation__link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'ubunturegular';
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: rem(30px);
+    text-transform: uppercase;
+ }
+ .navigation__item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    &:first-child{
+        &:before{
+            display: none;
+        }
+    }
+    &:before {
+        content: '';
+        display: block;
+        width: rem(4px);
+        height: rem(4px);
+        border-radius: 50%;
+        background-color: white;
+        margin: 0 rem(14px);
+         }
+}
+.navigation__items{
+    display: flex;
+}
+ .navigation{
+     align-items: center;
+     margin-right: rem(28px);
+ }
+ .navigation__list {
+    align-items: center;
+    display: flex;
+    margin-top: rem(24px);
+
+    @include tablets {
+        display: none;
+    }
+ }
+ .header__buttons {
+     display: flex;
+     align-items: center;
+ }
+.button {
+    padding: rem(3px) rem(16px);
+    border-radius: rem(7px);
+    background: #e35028;
+    color: white;
+    text-decoration: none;
+    margin-left: rem(10px);
+    font-family: 'ubunturegular';
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: rem(30px);
+    text-transform: uppercase;
+}
+.logo__img {
+    width: rem(100px);
+    height: rem(100px);
+}
+.main__content {
+    display: flex;
+    align-items: center;
+    flex: .8;
+    @include tablets {
+        flex-direction: column;
+        padding: 0 12%;
+        text-align: center;
+    }
+    @include phones {
+        padding: 0 5%;
+    }
+}
+.title {
+    font-family: 'gagalinregular';
+    font-size: rem(72px);
+        &--color_yellow {
+        color: #f9b43b ;
+        margin-bottom: rem(-40px);
+        font-weight: 300;
+        }
+        @include tablets {
+            font-size: rem(63px); 
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+}
+.main__subt {
+    font-size: rem(65px);
+    font-family: 'lifehackmedium';
+    color: white;
+    line-height: rem(60px);
+    font-weight: 300;
+    @include tablets {
+        margin: 0;
+        font-size: rem(54px);
+    }
+}
+.main__picture,
+.main__text {
+    width: 50%;
+    @include tablets {
+        width: 100%;
+    }
+}

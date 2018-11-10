@@ -1,0 +1,95 @@
+.best {
+    background: url(png/bestbg.png) center center /cover  no-repeat;
+
+}
+.best__title {
+font-family: 'lifehackmedium';
+font-size: rem(24px);
+font-weight: 500;
+line-height: rem(28.14px);
+letter-spacing: rem(-0.6px);
+width: rem(300px);
+text-align: center;
+@include phones {
+    text-align: left;
+}
+}
+.best__text {
+height: rem(62px);
+opacity: 0.8;
+color: #2f3234;
+font-family: 'ubunturegular';
+font-size: rem(14px);
+line-height: rem(24.02px);
+text-align: center;
+    @include phones{
+        text-align: left;
+    }
+}
+.best__item {
+    list-style: none;
+    padding-right: rem(20px);
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        width: 33%;
+        padding: 0;
+    }
+    @include phones {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.best__list {
+    display: flex;
+    @include tablets {
+        padding: 0;
+    }
+    @include phones {
+        flex-direction: column;
+    }
+}
+.title--thebest {
+    text-align: center;
+    color: #2f3234;
+    margin-top: rem(-81px);
+    font-weight: 300;
+}
+.best__img {
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding-left: rem(200px);
+
+    &--salat {
+    background-image: url(svg/natural.svg);
+    height: rem(75px);
+    width: rem(88px);
+    @include phones {
+        height: 7.6875rem;
+    }
+    }
+
+    &--hand {
+    background-image: url(svg/hand.svg);
+    height: rem(85px);
+    width: rem(73px);
+    @include phones {
+        height: 8.3125rem;
+    }
+    }
+
+    &--meat {
+    background-image: url(svg/meat.svg);
+    height: rem(89px);
+    width: rem(97px);
+    @include phones {
+        height: 7.5625rem;;
+    }
+    }
+    @include phones {
+        padding-left: 7.5rem;
+    }
+ }
+

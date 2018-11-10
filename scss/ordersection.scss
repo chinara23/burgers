@@ -1,0 +1,161 @@
+.order__block {
+    margin-bottom: rem(15px);
+    display: flex;
+}
+.form {
+    color: white;
+    display: flex;
+    @include tablets{
+        flex-direction: column;
+        margin-left: 0;
+        padding: 0 18%;
+    }
+    @include phones {
+        padding: 0 5%;
+    }
+}
+.order__input {
+    border: initial;
+    padding: rem(5px) rem(20px);
+    border-radius: rem(5px);
+    background: white;
+    height: rem(25px);
+    width: rem(180px);
+}
+.order {
+    background-size: cover;
+    background-image: url(png/back.png);
+}
+.order__form-block {
+    margin-left: rem(20px);
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.title--order {
+    color: #f9b43b;
+    margin-top: 0;
+    font-weight: 400;
+    margin-left: rem(140px);
+    margin-bottom: rem(25px);
+}
+.comments {
+    margin-left: rem(20px);
+    @include tablets {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.comments__input {
+    border: initial;
+    padding: rem(5px) rem(20px);
+    border-radius: rem(5px);
+    background: white;
+    width: rem(460px);
+    height: rem(110px);
+}
+.order__input--home {
+    width: rem(60px);
+    height: rem(25px);
+}
+.order__form {
+    width: rem(475px);
+    @include tablets {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.order__input--street {
+    width: rem(420px);
+}
+.order__title {
+font-family: "ubunturegular";
+font-size: rem(14px);
+line-height: rem(24px);
+}
+.payment__fake {
+    display: block;
+    width: rem(14px);
+    height: rem(14px);
+    border-radius: 50%;
+    border: rem(1px) solid #fff;
+    position: relative;
+    background: white;
+    margin-right: rem(10px);
+    &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #f9b43b;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: rem(-4px);
+        margin-left: rem(-4px);
+        transition: .5s;
+    }
+}
+.payment__input-call {
+    width: rem(15px);
+    height: rem(15px);
+    margin-right: rem(10px);
+}
+.payment__input:checked + .payment__fake::before {
+    width: rem(8px);
+    height: rem(8px);
+}
+.payment__input {
+    position: absolute;
+    top: 0;
+    left: rem(-9999px);
+}
+.payment {
+    display: flex;
+    margin-top: 20px;
+}
+.payment__label {
+    margin-right: 20px;
+    display: flex;
+    @include phones {
+        justify-content: center;
+    }
+}
+.payment__button {
+    padding: 3px 16px;
+    border-radius: 7px;
+    background: #e35028;
+    color: white;
+    border: none;
+    font-family: 'ubunturegular';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.order__title-pay {
+    font-family: "ubunturegular";
+    font-size: 14px;
+}
+.payments {
+    margin-top: 20px;
+    @include phones {
+        justify-content: center;
+    }
+}
+.payment__block-order {
+    display: flex;
+    margin-top: 20px;
+    @include phones {
+        justify-content: center;
+    }
+}
+.paymennt__button-clean {
+    color: #ffffff;
+    font-family: 'ubunturegular';
+    font-size: 14px;
+    font-weight: 300;
+    background-color: transparent;
+    border: none;
+}
