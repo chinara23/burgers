@@ -416,7 +416,7 @@ body {
   width: 6.875rem;
   height: 2.1875rem;
   line-height: 2.0625rem;
-  padding: 0.1875rem 0rem 0rem 1rem; }
+  padding: 0.1875rem 0.5rem 0rem 0.5rem; }
   @media (max-width: 480px) {
     .button--read {
       display: block; } }
@@ -863,7 +863,8 @@ li {
 .menu__item {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 100vh; }
 
 .menu__text {
   color: white;
@@ -871,7 +872,8 @@ li {
   font-family: 'gagalinregular';
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+  white-space: nowrap; }
 
 .menu__text--diet {
   margin-top: 15rem;
@@ -880,6 +882,10 @@ li {
 .menu__text--veg {
   margin-top: 11.875rem;
   margin-left: 8.625rem; }
+
+.menu__text--meat {
+  margin-top: 13.4375rem;
+  margin-left: 8.75rem; }
 
 .menu__content {
   -webkit-transition: 1s;
@@ -933,76 +939,3 @@ ul li {
 
 .switcher__item-link:hover::before {
   opacity: 1; }
-
-.nava {
-  background-color: #2e3133;
-  opacity: 0.9;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
-
-.nav__burger-link {
-  height: 1.875rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: fixed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  top: 2rem;
-  right: 1.75rem; }
-
-.nav__burger {
-  width: 1.75rem;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 5px;
-  position: relative; }
-  .nav__burger::before {
-    content: "";
-    display: block;
-    width: 1.75rem;
-    height: 5px;
-    background-color: white;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    position: absolute;
-    top: -0.625rem;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s; }
-  .nav__burger:after {
-    content: "";
-    display: block;
-    width: 1.75rem;
-    height: 5px;
-    background-color: white;
-    border-radius: 5px;
-    position: absolute;
-    top: 0.625rem;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s; }
-
-.nav__burger:before {
-  content: "";
-  display: block;
-  width: 1.75rem;
-  height: 5px;
-  background-color: white;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  position: absolute;
-  top: -0.625rem;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }

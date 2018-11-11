@@ -28,12 +28,14 @@
 }
 .menu__item {
     display: flex;
+    height: 100vh;
 }
 .menu__text {
     color: white;
     font-size: 2.5rem;
     font-family: 'gagalinregular';
     transform: rotate(-90deg);
+    white-space: nowrap;
 }
 .menu__text--diet {
     margin-top: rem(240px);
@@ -42,6 +44,10 @@
 .menu__text--veg {
     margin-top: rem(190px);
     margin-left: rem(138px);
+}
+.menu__text--meat {
+    margin-top: rem(215px);
+    margin-left: rem(140px);
 }
 .menu__content {
     transition: 1s;
