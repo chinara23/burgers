@@ -97,7 +97,7 @@
 }
 .main__img {
     @include phones {
-        margin-left: rem(-50px);
+        margin-left: -4.125rem;
     }
 }
 .title {

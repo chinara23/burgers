@@ -7,8 +7,8 @@
     display: flex;
     @include tablets{
         flex-direction: column;
-        margin-left: 0;
-        padding: 0 18%;
+        justify-content: center;
+        align-items: center;
     }
     @include phones {
         padding: 0 5%;
@@ -39,14 +39,8 @@
     margin-left: rem(140px);
     margin-bottom: rem(25px);
     @include tablets {
-        margin-left: 6.75rem;
-    }
-}
-.comments {
-    margin-left: rem(20px);
-    @include tablets {
-        width: 100%;
-        margin-left: 0;
+       text-align: center;
+       margin-left: 0;
     }
 }
 .comments__input {
@@ -54,7 +48,7 @@
     padding: rem(5px) rem(20px);
     border-radius: rem(5px);
     background: white;
-    width: 28.75rem;
+    width: 23.75rem;
     height: rem(110px);
         @include tablets {
             width: 26.75rem;
@@ -66,10 +60,6 @@
 }
 .order__form {
     width: rem(475px);
-    @include tablets {
-        width: 100%;
-        margin-left: 0;
-    }
 }
 .order__input--street {
     width: rem(420px);
