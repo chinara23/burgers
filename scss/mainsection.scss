@@ -95,6 +95,11 @@
         padding: 0 5%;
     }
 }
+.main__img {
+    @include phones {
+        margin-left: rem(-50px);
+    }
+}
 .title {
     font-family: 'gagalinregular';
     font-size: rem(72px);

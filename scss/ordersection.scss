@@ -38,6 +38,9 @@
     font-weight: 400;
     margin-left: rem(140px);
     margin-bottom: rem(25px);
+    @include tablets {
+        margin-left: 6.75rem;
+    }
 }
 .comments {
     margin-left: rem(20px);
@@ -51,9 +54,12 @@
     padding: rem(5px) rem(20px);
     border-radius: rem(5px);
     background: white;
-    width: rem(460px);
+    width: 28.75rem;
     height: rem(110px);
-}
+        @include tablets {
+            width: 26.75rem;
+        }
+    }
 .order__input--home {
     width: rem(60px);
     height: rem(25px);

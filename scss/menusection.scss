@@ -38,16 +38,34 @@
     white-space: nowrap;
 }
 .menu__text--diet {
-    margin-top: rem(240px);
-    margin-left: rem(139px);
+    margin-top: 18rem;
+    margin-left: 4.6875rem;
+    @include tablets {
+        margin-top: 24rem;;
+    }
+    @include phones{
+        margin-top: 27rem;
+    }
 }
 .menu__text--veg {
-    margin-top: rem(190px);
-    margin-left: rem(138px);
+    margin-top: 14.875rem;
+    margin-left: 4.625rem;
+    @include tablets{
+        margin-top: 20.875rem;
+    }
+    @include phones {
+        margin-top:23.875rem;
+    }
 }
 .menu__text--meat {
-    margin-top: rem(215px);
-    margin-left: rem(140px);
+    margin-top: 16.4375rem;
+    margin-left: 4.75rem;
+    @include tablets {
+        margin-top:22.4375rem;
+    }
+    @include phones {
+        margin-top:25.4375rem ;
+    }
 }
 .menu__content {
     transition: 1s;
