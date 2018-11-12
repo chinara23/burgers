@@ -367,8 +367,8 @@ body {
       display: none; } }
 
 .reviews__text {
-  width: 13.875rem;
-  margin-left: 1.25rem;
+  width: 100%;
+  padding: 0 10px;
   color: #ffffff;
   font-family: 'ubunturegular';
   font-size: 0.875rem;
