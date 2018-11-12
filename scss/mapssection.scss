@@ -19,6 +19,7 @@ color: #ffffff;
 font-family: 'ubunturegular';
 font-size: rem(14px);
 line-height: rem(35px);
+white-space: nowrap;
 @include phones{
     line-height: 1.1875rem;
     }
@@ -91,7 +92,7 @@ margin-left: rem(20px);
     position: absolute;
     bottom: rem(7px);
     @include phones{
-        bottom: 2.4375rem;
+        bottom: 3.4375rem;
     }
 }
 .map__info {

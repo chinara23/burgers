@@ -51,7 +51,7 @@
     width: 23.75rem;
     height: rem(110px);
         @include tablets {
-            width: 26.75rem;
+            width: 25.75rem;
         }
     }
 .order__input--home {
@@ -60,6 +60,9 @@
 }
 .order__form {
     width: rem(475px);
+    @include phones{
+        width: 28.6875rem;
+    }
 }
 .order__input--street {
     width: rem(420px);

@@ -38,3 +38,49 @@
  }
 
 
+
+.nav__burger-link {
+    display: none;
+    height: 1.875rem;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: fixed;
+    top: 2rem;
+    right: 1.75rem;
+    z-index: 500;
+    @include tablets {
+        display: block;
+    }
+ }
+ .nav__burger {
+    width: 1.75rem;
+    height: 5px;
+    background-color: white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        width: 1.75rem;
+        height: 5px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top: 0.625rem;
+        transition: 0.5s;
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 1.75rem;
+        height: 5px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top: -0.625rem;
+        transition: 0.5s;
+    }
+ }
