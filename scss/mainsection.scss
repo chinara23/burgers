@@ -77,9 +77,11 @@
     font-weight: 500;
     line-height: rem(30px);
     text-transform: uppercase;
-    @include tablets {
-        margin-left: -9.375rem;
-        margin-top: rem(44px);
+    &--knock {
+        @include tablets {
+            margin-left: -9.375rem;
+            margin-top: -2.25rem;
+        }
     }
 }
 .logo__img {
@@ -101,7 +103,7 @@
 }
 .main__img {
     @include phones {
-        margin-left: -5.125rem;
+        width: 100%;
     }
 }
 .title {

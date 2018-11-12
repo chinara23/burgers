@@ -257,9 +257,9 @@ body {
   line-height: 1.875rem;
   text-transform: uppercase; }
   @media (max-width: 768px) {
-    .button {
+    .button--knock {
       margin-left: -9.375rem;
-      margin-top: 2.75rem; } }
+      margin-top: -2.25rem; } }
 
 .logo__img {
   width: 6.25rem;
@@ -289,7 +289,7 @@ body {
 
 @media (max-width: 480px) {
   .main__img {
-    margin-left: -5.125rem; } }
+    width: 100%; } }
 
 .title {
   font-family: 'gagalinregular';
