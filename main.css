@@ -402,6 +402,8 @@ body {
 .reviews__hover {
   position: absolute;
   right: 0;
+  height: 100%;
+  width: 100%;
   top: 0;
   bottom: 0;
   left: 0;
