@@ -332,12 +332,12 @@
                         <input type="text" class="comments__input">
                         <div class="payment">
                             <label class="payment__label">
-                                <input type="radio" class="payment__input">
+                                <input type="radio" name="pay" class="payment__input">
                                 <span class="payment__fake"></span>
                                 <span class="order__title-pay">Потребуется сдача</span>
                             </label>
                             <label class="payment__label">
-                                <input type="radio" class="payment__input">
+                                <input type="radio" name="pay" class="payment__input">
                                 <span class="payment__fake"></span>
                                 <span class="order__title-pay">Оплата по карте</span>
                             </label>
@@ -371,11 +371,29 @@
                                 <a href="#" class="map__phone">+7(812)377-13-77</a>
                                 <div class="map__fake"></div>
                             </div>
-                            <div class="map__social">
-                                <div class="social social--vk"></div>
-                                <div class="social social--fb"></div>
-                                <div class="social social--inst"></div>
-                                <div class="social social--twitter"></div>
+                            <div class="map__social-block">
+                                <ul class="map__social-list">
+                                    <li class="social">
+                                        <a href="#" class="map__social-link">
+                                            <div class="map__social-img map__social-img--vk"></div> 
+                                        </a>
+                                    </li>
+                                    <li class="social ">
+                                          <a href="#" class="map__social-link map__social-link--fb">
+                                              <div class="map__social-img map__social-img--fb"></div>
+                                        </a>
+                                    </li>
+                                    <li class="social">
+                                         <a href="#" class="map__social-link">
+                                             <div class="map__social-img map__social-img--inst"></div>
+                                         </a>
+                                    </li>
+                                    <li class="social "> 
+                                        <a href="#" class="map__social-link"> 
+                                            <div class="map__social-img map__social-img--twitter"></div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                 </footer>
