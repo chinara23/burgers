@@ -43,8 +43,11 @@ color: #ffffff;
 font-family: 'gagalinregular';
 font-size: rem(18px);
 line-height: rem(60.13px);
-text-decoration: none;
+background-color: transparent;
+border: none;
 position: relative;
+outline: none;
+cursor: pointer;
 @include tablets {
     display: inline-flex;
 }

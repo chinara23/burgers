@@ -11,6 +11,7 @@
     margin-left: rem(130px);
     @include phones {
         margin-left:  2.125rem;
+        font-size: rem(50px);
     }
 }
 .menu__list {
@@ -19,13 +20,18 @@
     position: absolute;
     right: 0;
 }
-.menu__link {
-    text-decoration: none;
+.menu__button {
     display: flex;
     width: 5rem;
     height: 650px;
     background-size: cover;
     min-height: 100%;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    @include phones{
+        width: 3rem;
+    }
 }
 .menu__item {
     display: flex;
@@ -36,37 +42,35 @@
     color: white;
     font-size: 2.5rem;
     font-family: 'gagalinregular';
+    position: absolute;
     transform: rotate(-90deg);
     white-space: nowrap;
+    @include phones {
+        font-size: 2rem;
+    }
 }
 .menu__text--diet {
-    margin-top: 18rem;
-    margin-left: 4.6875rem;
-    @include tablets {
-        margin-top: 24rem;;
-    }
-    @include phones{
-        margin-top: 27rem;
+    left: rem(-78px);
+    bottom: rem(146px);
+    @include phones {
+        bottom: 7.125rem;
+        left: -4.475rem;
     }
 }
 .menu__text--veg {
-    margin-top: 14.875rem;
-    margin-left: 4.625rem;
-    @include tablets{
-        margin-top: 20.875rem;
-    }
+    left: rem(-103px);
+    bottom: rem(170px);
     @include phones {
-        margin-top:23.875rem;
+        bottom: 8.625rem;
+        left: -5.7375rem;
     }
 }
 .menu__text--meat {
-    margin-top: 16.4375rem;
-    margin-left: 4.75rem;
-    @include tablets {
-        margin-top:22.4375rem;
-    }
+    left: rem(-90px);
+    bottom: rem(158px);
     @include phones {
-        margin-top:25.4375rem ;
+        bottom: 7.875rem;
+        left: -5.125rem;
     }
 }
 .menu__content {

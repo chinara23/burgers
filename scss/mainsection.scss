@@ -96,6 +96,7 @@
         flex-direction: column;
         padding: 0 12%;
         text-align: center;
+        margin-top: rem(-50px);
     }
     @include phones {
         padding: 0 5%;
@@ -136,5 +137,29 @@
     width: 50%;
     @include tablets {
         width: 100%;
+    }
+}
+.main__down {
+    width: 1.875rem;
+    height: 0.9375rem;
+    align-self: center;
+    margin-top: 1.875rem;
+}
+.main__down-link {
+    display: block;
+    
+}
+.main__down-img {
+    background-image: url(svg/arrow.svg);
+    width: 1.875rem;
+    height: 0.9375rem;
+    background-repeat: no-repeat;
+    @include tablets {
+        margin-top: 5.875rem;
+        width: 2.875rem;
+        height: 1.9375rem;
+    }
+    @include phones{
+        margin-top: 1.875rem;
     }
 }

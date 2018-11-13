@@ -56,6 +56,13 @@
                         <h1 class="main__subt"> натуральные бургеры </h1>
                     </div>
                 </div>
+                <div class="main__down">
+                    <div class="maindown">
+                        <a href="#" class="main__down-link">
+                            <div class="main__down-img"></div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section best">
@@ -71,7 +78,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="best__item ">
+                    <li class="best__item best__item--hand">
                         <div class="best__img best__img--hand"></div>
                         <div class="best__block">
                             <h3 class="best__title">Ручная сборка</h3>
@@ -97,25 +104,25 @@
             <h2 class="menu__title">меню</h2>
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#" class="menu__link" style="background-image:url(png/meatlover.png)">
+                    <button class="menu__button" style="background-image:url(png/meatlover.png)">
                         <span class="menu__text menu__text--meat">для мясоедов</span>
-                    </a>
+                    </button>
                     <div class="menu__content">
                         <p class="menu__subt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugiat ratione ullam id earum possimus fuga facilis. Obcaecati exercitationem, officiis culpa distinctio accusamus a quos ad natus voluptas eveniet nesciunt!</p>
                     </div>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link" style="background-image:url(png/veg.png)">
+                    <button class="menu__button" style="background-image:url(png/veg.png)">
                         <span class="menu__text menu__text--veg">вегетарианское</span>
-                    </a>
+                    </button>
                     <div class="menu__content">
                         <p class="menu__subt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugiat ratione ullam id earum possimus fuga facilis. Obcaecati exercitationem, officiis culpa distinctio accusamus a quos ad natus voluptas eveniet nesciunt!</p>
                     </div>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link" style="background-image:url(png/diet.png)">
+                    <button class="menu__button" style="background-image:url(png/diet.png)">
                         <span class="menu__text menu__text--diet">диетическое</span>
-                    </a>
+                    </button>
                     <div class="menu__content">
                         <p class="menu__subt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugiat ratione ullam id earum possimus fuga facilis. Obcaecati exercitationem, officiis culpa distinctio accusamus a quos ad natus voluptas eveniet nesciunt!</p>
                     </div>
@@ -237,7 +244,7 @@
                 </div>
                 <ul class="team__list">
                     <li class="team__item">
-                        <a href="#" class="team__link"> ричард джеймс</a>
+                        <button class="team__link"> ричард джеймс</button>
                         <div class="team__block">
                             <div class="team__picture">
                                 <img src="png/aphex.png" alt="мужчина" class="team__img">
@@ -249,7 +256,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <a href="#" class="team__link">дэниэл редклиф</a>
+                        <button class="team__link">дэниэл редклиф</button>
                         <div class="team__block">
                             <div class="team__picture">
                                 <img src="png/aphex.png" alt="мужчина" class="team__img">
@@ -261,7 +268,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <a href="#" class="team__link">николай иванов</a>
+                        <button class="team__link">николай иванов</button>
                         <div class="team__block">
                             <div class="team__picture">
                                 <img src="png/aphex.png" alt="мужчина" class="team__img">
@@ -273,7 +280,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <a href="#" class="team__link">джейк финн</a>
+                        <button class="team__link">джейк финн</button>
                         <div class="team__block">
                             <div class="team__picture">
                                 <img src="png/aphex.png" alt="мужчина" class="team__img">
@@ -329,7 +336,7 @@
                     </div>
                     <div class="comments">
                         <div class="order__title">Комментарий</div>
-                        <input type="text" class="comments__input">
+                        <input type="textarea" class="comments__input">
                         <div class="payment">
                             <label class="payment__label">
                                 <input type="radio" name="pay" class="payment__input">
@@ -343,19 +350,18 @@
                             </label>
                         </div>
                         <div class="payments">
-                            <label  class="payment__label">
+                            <label  class="payment__block">
                                 <input type="button" class=" payment__input-call">
                                 <span class="order__title-pay">Не перезванивать</span>
                             </label>
                         </div>
                         <div class="payment__block-order">
-                            <label  class="payment__label">
-                                <button type="button" class="payment__button"> Заказать 
-                                </button>
-                            </label> 
-                            <label  class="payment__label">
-                                <button class="paymennt__button-clean">очистить</button>
-                            </label>
+                            <div  class="payment__block">
+                                <button type="submit" class="payment__button"> Заказать</button>
+                            </div> 
+                            <div  class="payment__label">
+                                <button class="paymennt__button-clean" type="reset">очистить</button>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -432,4 +438,4 @@
     <a href="#" class="nav__burger-link">
         <div class="nav__burger"></div>
     </a>
-</body>
+</body> 

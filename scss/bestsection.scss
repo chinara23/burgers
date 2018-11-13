@@ -26,6 +26,12 @@ text-align: center;
         text-align: left;
     }
 }
+.best__block {
+    @include phones {
+        width: 80%;
+        padding-left: rem(7px);
+    }
+}
 .best__item {
     list-style: none;
     padding-right: rem(20px);
@@ -37,8 +43,13 @@ text-align: center;
     }
     @include phones {
         flex-direction: row;
-        width: 100%;
+        width: 95%;
         margin-bottom: 2rem;
+    }
+    &--hand {
+        @include phones {
+            margin-bottom: 3rem;
+        }
     }
 }
 

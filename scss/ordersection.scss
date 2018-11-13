@@ -12,6 +12,7 @@
     }
     @include phones {
         padding: 0 5%;
+        margin-left: 5.8125rem;
     }
 }
 .order__input {
@@ -21,6 +22,9 @@
     background: white;
     height: rem(25px);
     width: rem(180px);
+    @include phones {
+        width:8.25rem ;
+    }
 }
 .order {
     background-size: cover;
@@ -53,10 +57,17 @@
         @include tablets {
             width: 25.75rem;
         }
+        @include phones {
+            width: 20rem;
+            margin-right: 5.6875rem;
+        }
     }
 .order__input--home {
     width: rem(60px);
     height: rem(25px);
+    @include phones {
+        width: 2.25rem;
+    }
 }
 .order__form {
     width: rem(475px);
@@ -66,6 +77,9 @@
 }
 .order__input--street {
     width: rem(420px);
+    @include phones {
+        width: 20.25rem;
+    }
 }
 .order__title {
 font-family: "ubunturegular";
@@ -121,6 +135,13 @@ line-height: rem(24px);
         justify-content: center;
     }
 }
+.payment__block {
+    margin-right: 20px;
+    display: flex;
+    @include phones {
+        justify-content: center;
+    }
+}
 .payment__button {
     padding: 3px 16px;
     border-radius: 7px;
@@ -132,6 +153,8 @@ line-height: rem(24px);
     font-weight: 500;
     line-height: 30px;
     text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
 }
 .order__title-pay {
     font-family: "ubunturegular";
@@ -157,4 +180,6 @@ line-height: rem(24px);
     font-weight: 300;
     background-color: transparent;
     border: none;
+    outline: none;
+    cursor: pointer;
 }
