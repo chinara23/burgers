@@ -651,41 +651,9 @@ li {
     .social {
       margin-top: 0.125rem; } }
 
-.map__social-img {
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 1.4375rem;
-  height: 1.25rem;
-  margin-right: 1.25rem; }
-
-.map__social-img--inst {
-  background-image: url(png/inst.png); }
-  @media (max-width: 480px) {
-    .map__social-img--inst {
-      width: 2.375rem;
-      height: 2.25rem;
-      margin-top: -0.5625rem; } }
-
-.map__social-img--twitter {
-  background-image: url(png/twitter.png); }
-
-.map__social-img--fb {
-  background-image: url(png/fb.png); }
-  @media (max-width: 480px) {
-    .map__social-img--fb {
-      width: 2.375rem;
-      height: 2.25rem;
-      margin-top: -0.5625rem; } }
-
-.map__social-img--vk {
-  background-image: url(png/vk.png); }
-  @media (max-width: 480px) {
-    .map__social-img--vk {
-      height: 1rem;
-      width: 2.5rem; } }
-  @media (max-width: 768px) {
-    .map__social-img--vk {
-      margin-left: 0; } }
+.social__icon {
+  width: 1.5625rem;
+  height: 3.4375rem; }
 
 .map__fake {
   background-image: url(svg/phone.svg);

@@ -58,41 +58,9 @@ margin-left: rem(20px);
     }
 } 
 
-.map__social-img {
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: rem(23px);
-    height: rem(20px);
-    margin-right: rem(20px);
-}
-.map__social-img--inst{
-    background-image: url(png/inst.png);
-    @include phones {
-        width: 2.375rem;
-        height: 2.25rem;
-        margin-top: rem(-9px);
-    }
-}
-.map__social-img--twitter {
-    background-image: url(png/twitter.png);
-}
-.map__social-img--fb {
-    background-image: url(png/fb.png);
-    @include phones {
-        width: 2.375rem;
-        height: 2.25rem;
-        margin-top: rem(-9px);
-    }
-}
-.map__social-img--vk {
-    background-image: url(png/vk.png); 
-    @include phones {
-        height:rem(16px) ;
-        width: rem(40px);
-    }
-    @include tablets {
-        margin-left: 0;
-    }
+.social__icon {
+    width: rem(25px);
+    height: rem(55px);
 }
 .map__fake {
     background-image: url(svg/phone.svg); 
