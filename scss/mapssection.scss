@@ -43,15 +43,12 @@ margin-left: rem(20px);
     display: flex;
     padding-left: rem(270px);
     @include phones {
-        margin-bottom: 0;
+        margin-bottom: rem(-14px);
         padding-left: 0;
+        margin-top: 0;
     }
 }
 .social {
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: rem(23px);
-    height: rem(20px);
     margin-right: rem(20px);
     @include phones {
         margin-top: 0.125rem;
@@ -59,8 +56,9 @@ margin-left: rem(20px);
 } 
 
 .social__icon {
-    width: rem(25px);
-    height: rem(55px);
+    width: rem(20px);
+    height: rem(30px);
+    fill: #575757;
     &:hover {
         fill: white;
     }

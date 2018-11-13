@@ -638,22 +638,20 @@ li {
   padding-left: 16.875rem; }
   @media (max-width: 480px) {
     .map__social-list {
-      margin-bottom: 0;
-      padding-left: 0; } }
+      margin-bottom: -0.875rem;
+      padding-left: 0;
+      margin-top: 0; } }
 
 .social {
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 1.4375rem;
-  height: 1.25rem;
   margin-right: 1.25rem; }
   @media (max-width: 480px) {
     .social {
       margin-top: 0.125rem; } }
 
 .social__icon {
-  width: 1.5625rem;
-  height: 3.4375rem; }
+  width: 1.25rem;
+  height: 1.875rem;
+  fill: #575757; }
   .social__icon:hover {
     fill: white; }
 
