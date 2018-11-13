@@ -654,6 +654,8 @@ li {
 .social__icon {
   width: 1.5625rem;
   height: 3.4375rem; }
+  .social__icon:hover {
+    fill: white; }
 
 .map__fake {
   background-image: url(svg/phone.svg);

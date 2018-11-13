@@ -61,6 +61,9 @@ margin-left: rem(20px);
 .social__icon {
     width: rem(25px);
     height: rem(55px);
+    &:hover {
+        fill: white;
+    }
 }
 .map__fake {
     background-image: url(svg/phone.svg); 
