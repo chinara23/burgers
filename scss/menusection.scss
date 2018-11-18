@@ -29,8 +29,15 @@
     cursor: pointer;
     border: none;
     position: relative;
+    min-width: 80px;
     @include phones{
         width: 3rem;
+        min-width: 60px
+    }
+}
+.slide__price {
+    @include phones{
+        padding-top: 23px;
     }
 }
 .menu__item {
@@ -79,6 +86,16 @@
     opacity: 0.9;
     width: 0;
     overflow: hidden;
+    height: 650px;
+    min-height: 100%;
+}
+.menu__content--active {
+    transition: 1s;
+    background-color: #2f3133;
+    opacity: 0.9;
+    width: 0;
+    overflow: hidden;
+    height: 650px;
 }
 .menu__subt {
     color: #fff;

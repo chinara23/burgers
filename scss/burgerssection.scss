@@ -1,0 +1,243 @@
+.burgers {
+    background: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+} 
+.slide__pic {
+    width: 100%;
+    margin-top: 6.6875rem;
+    @include tablets{
+        margin-top: 0;
+        width: 90%;
+    }
+    @include phones{
+        margin-top: 6.6875rem;
+    }
+}
+.slide {
+    display: flex;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+.slide__title {
+color: #ffffff;
+font-family: 'gagalinregular';
+font-size: 72px;
+font-weight: 400;
+line-height: 63.93px;
+    @include tablets {
+        margin-bottom: 0;
+    }
+    @include phones {
+        font-size: 50px;
+        margin-top: 0;
+        text-align: center;
+        margin-left: -25px;
+    }
+}
+.slide__text {
+width: 441px;
+height: 86px;
+color: #ffffff;
+font-family: 'ubunturegular';
+font-size: 14px;
+line-height: 23.97px;
+@include phones {
+    width: 100%;
+    text-align: center;
+    margin-left: -13px;
+}
+}
+.slide__number {
+color: #e35028;
+font-family: 'gagalinregular';  
+font-size: 72px;
+letter-spacing: -1.79px;
+@include phones {
+    font-size: 40px;
+}
+}
+.slide__currency {
+color: #e35028;
+font-family: 'gagalinregular';
+font-size: 30px;
+letter-spacing: -0.75px;
+@include phones{
+    font-size: 20px;
+}
+}
+.slide__order {
+    display: flex;
+    @include phones{
+        margin-top: 67px;
+    }
+}
+.button--slider {
+    border: none;
+    cursor: pointer;
+}
+.composition__text {
+    color: white;
+    font-size: 0.875rem;
+    font-family: 'gagalinregular';
+    font-weight: 400;
+}
+.composition__link {
+    text-decoration: none;
+    width: 5.625rem;
+    height: 5.625rem;
+    background-color: #eb8c38;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    &:hover + .composition__hover{
+        display: block;
+    }
+}
+.composition , .kkal {
+    position: absolute;
+}
+.slide__button {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+.composition__content {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    justify-content: space-between;
+    line-height: rem(30px);
+    margin-top: 7px;
+}
+.composition__item {
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+.composition__hover{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+    top: 0;
+    left: 90px;
+    display: none;
+}
+.composition__list {
+    padding: 6px 20px;
+}
+.composition__pic {
+    background-repeat: no-repeat;
+    &--beef {
+        background-image: url(svg/beef.svg);
+        width: 45px;
+        height: 39px;
+    }
+    &--cucumber {
+        background-image: url(svg/cucumber.svg);
+        width: 37px;
+    }
+    &--salad {
+        background-image: url(svg/salad.svg);
+        width: 38px;
+    }
+    &--souce {
+        background-image: url(svg/sauce.svg);
+        width: 41px;
+    }
+    &--buns{
+        background-image: url(svg/buns.svg);
+        height: 30px;
+        width: 45px;
+    }
+    &--cheese {
+        background-image: url(svg/cheese.svg);
+        height: 34px;
+        width: 36px;
+    }
+}
+.composition__weight {
+    font-size: rem(12px);
+    font-weight: 300;
+    text-align: right;
+    font-family: 'ubunturegular';
+    padding-left: 32px;
+    padding-right: 12px;
+}
+.composition__name {
+    font-family: 'ubunturegular';
+    font-size: 13px;
+    padding-left: 15px;
+}
+.kkal__pic {
+    background-image: url(svg/kkal.svg);
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
+.kkal {
+    left: 0;
+    @include phones{
+        right: 0;
+        top: 0;
+    }
+}
+.kkal__icon {
+    display: flex;
+    flex-direction: column;
+     @include phones {
+         position: absolute;
+         right: 0;
+     }
+}
+.kkal__number, .kkal__unit {
+    font-family: 'gagalinregular';
+    color: white;
+    opacity: 0.8;
+}
+.kkal__number {
+    position: absolute;
+    font-size: 1.375rem;
+    bottom: 23px;
+    right: 10px;
+}
+.slider__item{
+    position: relative;
+}
+.composition {
+    top: 0;
+}
+.kkal__unit {
+    padding-left: 13px;
+    font-size: 0.9375rem;
+}
+.slider__arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    left:0;
+}
+.slider {
+    position: relative;
+    width: 100%;
+}
+.slider__arrow{
+    width: 1.875em;
+    height: 3.125rem;
+    border: transparent;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    background-repeat: no-repeat;
+    &--first{
+    background-image: url(png/arrowf.png);
+    }
+    &--second {
+        background-image: url(png/arrows.png);
+    }
+}

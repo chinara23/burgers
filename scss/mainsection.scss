@@ -11,7 +11,7 @@
     justify-content: flex-start;
  }
  .header {
-     margin-top: rem(10px);
+     margin-top: 10px;
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -42,7 +42,7 @@
         height: rem(4px);
         border-radius: 50%;
         background-color: white;
-        margin: 0 rem(14px);
+        margin: 0 14px;
          }
 }
 .navigation__items{
@@ -50,12 +50,12 @@
 }
  .navigation{
      align-items: center;
-     margin-right: rem(28px);
+     margin-right: 28px;
  }
  .navigation__list {
     align-items: center;
     display: flex;
-    margin-top: rem(24px);
+    margin-top: 24px;
 
     @include tablets {
         display: none;
@@ -66,16 +66,16 @@
      align-items: center;
  }
 .button {
-    padding: rem(3px) rem(16px);
+    padding:3px 16px;
     border-radius: rem(7px);
     background: #e35028;
     color: white;
     text-decoration: none;
-    margin-left: rem(10px);
+    margin-left: 10px;
     font-family: 'ubunturegular';
-    font-size: rem(13px);
+    font-size: 13px;
     font-weight: 500;
-    line-height: rem(30px);
+    line-height: 30px;
     text-transform: uppercase;
     &--knock {
         @include tablets {
@@ -96,7 +96,7 @@
         flex-direction: column;
         padding: 0 12%;
         text-align: center;
-        margin-top: rem(-50px);
+        margin-top: -50px;
     }
     @include phones {
         padding: 0 5%;
@@ -112,7 +112,7 @@
     font-size: rem(72px);
         &--color_yellow {
         color: #f9b43b ;
-        margin-bottom: rem(-40px);
+        margin-bottom: -40px;
         font-weight: 300;
         }
         @include tablets {
@@ -162,4 +162,56 @@
     @include phones{
         margin-top: 1.875rem;
     }
+}
+.burgerclick__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+.burgerclick, .burgerclick__content {
+    display: flex;
+    text-align: center;
+    background-color: #2e3133;
+    opacity: 0.9;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    display: none;
+}
+.burgerclick__img {
+    width: 5.6875rem;
+    height: 4.4375rem;
+    position: absolute;
+    top: 0.625rem;
+    left: 0.625rem;
+}
+.burgerclick__list, .burgerclick__item {
+    position: relative;
+}
+.burgerclick__list, .burgerclick__item, .burgerclick__link {
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: 'ubunturegular';
+}
+.burgerclick__item::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.burgerclick__item--contacts::after {
+    display: none;
 }
