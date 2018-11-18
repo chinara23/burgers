@@ -6,7 +6,7 @@
     margin-top: 6.6875rem;
     @include tablets{
         margin-top: 0;
-        width: 90%;
+        width: 60%;
     }
     @include phones{
         margin-top: 6.6875rem;
@@ -17,6 +17,7 @@
     @include tablets {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
     
 }
@@ -28,6 +29,7 @@ font-weight: 400;
 line-height: 63.93px;
     @include tablets {
         margin-bottom: 0;
+        font-size: rem(60px);
     }
     @include phones {
         font-size: 50px;
@@ -43,10 +45,9 @@ color: #ffffff;
 font-family: 'ubunturegular';
 font-size: 14px;
 line-height: 23.97px;
-@include phones {
+@include tablets {
     width: 100%;
-    text-align: center;
-    margin-left: -13px;
+    text-align: center
 }
 }
 .slide__number {
@@ -55,7 +56,10 @@ font-family: 'gagalinregular';
 font-size: 72px;
 letter-spacing: -1.79px;
 @include phones {
-    font-size: 40px;
+    font-size: rem(40px);
+}
+@include tablets{
+    font-size: rem(45px);
 }
 }
 .slide__currency {
@@ -66,11 +70,17 @@ letter-spacing: -0.75px;
 @include phones{
     font-size: 20px;
 }
+@include tablets {
+    font-size: rem(25px);
+}
 }
 .slide__order {
     display: flex;
+    @include tablets {
+        justify-content: center;
+    }
     @include phones{
-        margin-top: 67px;
+        margin-top: 50px;
     }
 }
 .button--slider {
@@ -104,6 +114,9 @@ letter-spacing: -0.75px;
 .slide__button {
     padding-top: 40px;
     padding-left: 20px;
+    @include tablets {
+        padding-top: 5px;
+    }
 }
 .composition__content {
     display: flex;
@@ -180,7 +193,7 @@ letter-spacing: -0.75px;
 }
 .kkal {
     left: 0;
-    @include phones{
+    @include tablets{
         right: 0;
         top: 0;
     }
@@ -188,7 +201,7 @@ letter-spacing: -0.75px;
 .kkal__icon {
     display: flex;
     flex-direction: column;
-     @include phones {
+     @include tablets {
          position: absolute;
          right: 0;
      }

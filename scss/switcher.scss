@@ -39,7 +39,7 @@
 
 
 
-.nav__burger-link {
+.nav__burger-button {
     display: none;
     height: 1.875rem;
     -webkit-box-align: center;
@@ -50,6 +50,8 @@
     top: 2rem;
     right: 1.75rem;
     z-index: 500;
+    background: transparent;
+    border: none;
     @include tablets {
         display: block;
     }

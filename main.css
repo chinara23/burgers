@@ -975,7 +975,7 @@ li {
   font-family: "gagalinregular";
   font-size: 4.5rem;
   font-weight: 400;
-  margin-left: 8.125rem; }
+  margin-left: 130px; }
   @media (max-width: 480px) {
     .menu__title {
       margin-left: 2.125rem;
@@ -1006,10 +1006,6 @@ li {
       width: 3rem;
       min-width: 60px; } }
 
-@media (max-width: 480px) {
-  .slide__price {
-    padding-top: 23px; } }
-
 .menu__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1031,24 +1027,24 @@ li {
       font-size: 2rem; } }
 
 .menu__text--diet {
-  left: -4.875rem;
-  bottom: 9.125rem; }
+  left: -78px;
+  bottom: 146px; }
   @media (max-width: 480px) {
     .menu__text--diet {
       bottom: 7.125rem;
       left: -4.475rem; } }
 
 .menu__text--veg {
-  left: -6.4375rem;
-  bottom: 10.625rem; }
+  left: -103px;
+  bottom: 170px; }
   @media (max-width: 480px) {
     .menu__text--veg {
       bottom: 8.625rem;
       left: -5.7375rem; } }
 
 .menu__text--meat {
-  left: -5.625rem;
-  bottom: 9.875rem; }
+  left: -90px;
+  bottom: 158px; }
   @media (max-width: 480px) {
     .menu__text--meat {
       bottom: 7.875rem;
@@ -1119,7 +1115,7 @@ ul li {
 .switcher__item-link:hover::before {
   opacity: 1; }
 
-.nav__burger-link {
+.nav__burger-button {
   display: none;
   height: 1.875rem;
   -webkit-box-align: center;
@@ -1131,9 +1127,11 @@ ul li {
   position: fixed;
   top: 2rem;
   right: 1.75rem;
-  z-index: 500; }
+  z-index: 500;
+  background: transparent;
+  border: none; }
   @media (max-width: 768px) {
-    .nav__burger-link {
+    .nav__burger-button {
       display: block; } }
 
 .nav__burger {
@@ -1180,7 +1178,7 @@ ul li {
   @media (max-width: 768px) {
     .slide__pic {
       margin-top: 0;
-      width: 90%; } }
+      width: 60%; } }
   @media (max-width: 480px) {
     .slide__pic {
       margin-top: 6.6875rem; } }
@@ -1197,7 +1195,8 @@ ul li {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column;
+      text-align: center; } }
 
 .slide__title {
   color: #ffffff;
@@ -1207,7 +1206,8 @@ ul li {
   line-height: 63.93px; }
   @media (max-width: 768px) {
     .slide__title {
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      font-size: 3.75rem; } }
   @media (max-width: 480px) {
     .slide__title {
       font-size: 50px;
@@ -1222,11 +1222,10 @@ ul li {
   font-family: 'ubunturegular';
   font-size: 14px;
   line-height: 23.97px; }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .slide__text {
       width: 100%;
-      text-align: center;
-      margin-left: -13px; } }
+      text-align: center; } }
 
 .slide__number {
   color: #e35028;
@@ -1235,7 +1234,10 @@ ul li {
   letter-spacing: -1.79px; }
   @media (max-width: 480px) {
     .slide__number {
-      font-size: 40px; } }
+      font-size: 2.5rem; } }
+  @media (max-width: 768px) {
+    .slide__number {
+      font-size: 2.8125rem; } }
 
 .slide__currency {
   color: #e35028;
@@ -1245,14 +1247,22 @@ ul li {
   @media (max-width: 480px) {
     .slide__currency {
       font-size: 20px; } }
+  @media (max-width: 768px) {
+    .slide__currency {
+      font-size: 1.5625rem; } }
 
 .slide__order {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media (max-width: 768px) {
+    .slide__order {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   @media (max-width: 480px) {
     .slide__order {
-      margin-top: 67px; } }
+      margin-top: 50px; } }
 
 .button--slider {
   border: none;
@@ -1293,6 +1303,9 @@ ul li {
 .slide__button {
   padding-top: 40px;
   padding-left: 20px; }
+  @media (max-width: 768px) {
+    .slide__button {
+      padding-top: 5px; } }
 
 .composition__content {
   display: -webkit-box;
@@ -1373,7 +1386,7 @@ ul li {
 
 .kkal {
   left: 0; }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .kkal {
       right: 0;
       top: 0; } }
@@ -1386,7 +1399,7 @@ ul li {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .kkal__icon {
       position: absolute;
       right: 0; } }

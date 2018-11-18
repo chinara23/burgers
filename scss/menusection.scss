@@ -8,7 +8,7 @@
     font-family: "gagalinregular";
     font-size: 4.5rem;
     font-weight: 400;
-    margin-left: rem(130px);
+    margin-left: 130px;
     @include phones {
         margin-left:  2.125rem;
         font-size: rem(50px);
@@ -35,11 +35,6 @@
         min-width: 60px
     }
 }
-.slide__price {
-    @include phones{
-        padding-top: 23px;
-    }
-}
 .menu__item {
     display: flex;
     height: 100vh;
@@ -57,24 +52,24 @@
     }
 }
 .menu__text--diet {
-    left: rem(-78px);
-    bottom: rem(146px);
+    left: -78px;
+    bottom: 146px;
     @include phones {
         bottom: 7.125rem;
         left: -4.475rem;
     }
 }
 .menu__text--veg {
-    left: rem(-103px);
-    bottom: rem(170px);
+    left: -103px;
+    bottom: 170px;
     @include phones {
         bottom: 8.625rem;
         left: -5.7375rem;
     }
 }
 .menu__text--meat {
-    left: rem(-90px);
-    bottom: rem(158px);
+    left: -90px;
+    bottom: 158px;
     @include phones {
         bottom: 7.875rem;
         left: -5.125rem;
