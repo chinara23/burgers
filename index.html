@@ -190,7 +190,9 @@
                             </div>
                             <div class="kkal">
                                 <div class="kkal__icon">
-                                    <div class="kkal__pic"></div>
+                                    <svg class="kkal__pic">
+                                        <use xlink:href="sprite.svg#kkal"></use>
+                                    </svg>
                                     <span class="kkal__number">1200</span>
                                     <span class="kkal__unit">ккал</span>
                                 </div>
@@ -199,8 +201,16 @@
                     </ul> 
                 </span>               
                 <div class="slider__arrows">
-                    <button class="slider__arrow slider__arrow--first"></button>
-                    <button class=" slider__arrow slider__arrow--second"></button>
+                    <button class="slider__arrow slider__arrow--first">
+                        <svg class="slider__arrow--first"> 
+                            <use xlink:href#arrow></use>
+                        </svg>
+                    </button>
+                    <button class=" slider__arrow slider__arrow--second">
+                        <svg class="slider__arrow--second"> 
+                            <use xlink:href#arrow></use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -548,7 +558,9 @@
     </ul>
     <div class="section burgerclick">
         <nav class="burgerclick__content">
-        <img src="svg/logo.svg" alt="логотип" class="burgerclick__img">
+        <svg class="burgerclick__img">
+            <use xlink:href#logo></use>
+        </svg>
             <ul class="burgerclick__list">
                 <li class="burgerclick__item">
                     <a href="#" class="burgerclick__link"> о нас</a>

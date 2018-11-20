@@ -142,6 +142,9 @@ letter-spacing: -0.75px;
 .composition__list {
     padding: 6px 20px;
 }
+.composition__img {
+    height: 50px;
+}
 .composition__pic {
     background-repeat: no-repeat;
     &--beef {
@@ -153,9 +156,11 @@ letter-spacing: -0.75px;
     }
     &--salad {
         width: 38px;
+        height: 2rem;
     }
     &--souce {
         width: 41px;
+        height: 2rem;
     }
     &--buns{
         height: 30px;
