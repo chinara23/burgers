@@ -1350,7 +1350,8 @@ ul li {
     width: 45px;
     height: 39px; }
   .composition__pic--cucumber {
-    width: 37px; }
+    width: 37px;
+    height: 2rem; }
   .composition__pic--salad {
     width: 38px;
     height: 2rem; }
@@ -1378,7 +1379,6 @@ ul li {
   padding-left: 15px; }
 
 .kkal__pic {
-  background-image: url(svg/kkal.svg);
   background-repeat: no-repeat;
   width: 60px;
   height: 60px; }
@@ -1448,7 +1448,3 @@ ul li {
   background: transparent;
   outline: none;
   background-repeat: no-repeat; }
-  .slider__arrow--first {
-    background-image: url(png/arrowf.png); }
-  .slider__arrow--second {
-    background-image: url(png/arrows.png); }
