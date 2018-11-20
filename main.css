@@ -25,6 +25,9 @@ body {
   -moz-osx-font-cmoothing: grayscale;
   position: relative; }
 
+.scroll-block {
+  overflow: hidden; }
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -374,7 +377,7 @@ body {
   flex-wrap: wrap;
   text-transform: uppercase; }
 
-.burgerclick, .burgerclick__content {
+.burgerclick {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,6 +423,12 @@ body {
 
 .burgerclick__item--contacts::after {
   display: none; }
+
+.burgerclick__open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden; }
 
 .reviews__list {
   background: black;
@@ -1117,6 +1126,8 @@ ul li {
 
 .nav__burger-button {
   display: none;
+  cursor: pointer;
+  outline: none;
   height: 1.875rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1165,6 +1176,21 @@ ul li {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s; }
+
+.nav__burger-button__active .nav__burger {
+  background: transparent; }
+
+.nav__burger-button__active .nav__burger::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.nav__burger-button__active .nav__burger::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
 
 .burgers {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));

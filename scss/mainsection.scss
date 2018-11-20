@@ -171,7 +171,7 @@
     flex-wrap: wrap;
     text-transform: uppercase;
 }
-.burgerclick, .burgerclick__content {
+.burgerclick{
     display: flex;
     text-align: center;
     background-color: #2e3133;
@@ -214,4 +214,8 @@
 }
 .burgerclick__item--contacts::after {
     display: none;
+}
+.burgerclick__open{
+    display: flex;
+    overflow: hidden;
 }

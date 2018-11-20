@@ -203,7 +203,7 @@
                 <div class="slider__arrows">
                     <button class="slider__arrow slider__arrow--first">
                         <svg class="slider__arrow--first"> 
-                            <use xlink:href#arrow></use>
+                            <use xlink:href="sprite.svg#arrow"></use>
                         </svg>
                     </button>
                     <button class=" slider__arrow slider__arrow--second">
@@ -556,34 +556,41 @@
                 <a href="#" class="switcher__item-link"></a>
             </li>
     </ul>
-    <div class="section burgerclick">
+    <div class="section burgerclick ">
         <nav class="burgerclick__content">
-        <svg class="burgerclick__img">
-            <use xlink:href#logo></use>
-        </svg>
-            <ul class="burgerclick__list">
-                <li class="burgerclick__item">
-                    <a href="#" class="burgerclick__link"> о нас</a>
-                </li>
-                <li class="burgerclick__item">
-                    <a href="#" class="burgerclick__link"> бургеры</a>
-                </li>
-                <li class="burgerclick__item">
-                    <a href="#" class="burgerclick__link"> команда</a>
-                </li>
-                <li class="burgerclick__item">
-                    <a href="#" class="burgerclick__link"> меню</a>
-                </li>
-                <li class="burgerclick__item">
-                    <a href="#" class="burgerclick__link"> отзывы</a>
-                </li>
-                <li class="burgerclick__item burgerclick__item--contacts">
-                    <a href="#" class="burgerclick__link"> контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <button class="nav__burger-button">
-        <div class="nav__burger"></div>
-    </button>
+            <svg class="burgerclick__img">
+                <use xlink:href="sprite.svg#logo"></use>
+            </svg>
+            <button class="fixed-menu__close">
+                <svg class="fixed-menu__close-icon">
+                    <use xlink:href="sprite.svg#cross"></use>
+                </svg>
+                </button>
+                <ul class="burgerclick__list">
+                    <li class="burgerclick__item">
+                        <a href="#" class="burgerclick__link"> о нас</a>
+                    </li>
+                    <li class="burgerclick__item">
+                        <a href="#" class="burgerclick__link"> бургеры</a>
+                    </li>
+                    <li class="burgerclick__item">
+                        <a href="#" class="burgerclick__link"> команда</a>
+                    </li>
+                    <li class="burgerclick__item">
+                        <a href="#" class="burgerclick__link"> меню</a>
+                    </li>
+                    <li class="burgerclick__item">
+                        <a href="#" class="burgerclick__link"> отзывы</a>
+                    </li>
+                    <li class="burgerclick__item burgerclick__item--contacts">
+                        <a href="#" class="burgerclick__link"> контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <button class="nav__burger-button  ">
+            <div class="nav__burger"></div>
+        </button>
+        <button class="nav__burger-close"></button>
+        <script src="scss/main.js"></script>
 </body> 
