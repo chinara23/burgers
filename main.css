@@ -1344,24 +1344,18 @@ ul li {
 .composition__pic {
   background-repeat: no-repeat; }
   .composition__pic--beef {
-    background-image: url(svg/beef.svg);
     width: 45px;
     height: 39px; }
   .composition__pic--cucumber {
-    background-image: url(svg/cucumber.svg);
     width: 37px; }
   .composition__pic--salad {
-    background-image: url(svg/salad.svg);
     width: 38px; }
   .composition__pic--souce {
-    background-image: url(svg/sauce.svg);
     width: 41px; }
   .composition__pic--buns {
-    background-image: url(svg/buns.svg);
     height: 30px;
     width: 45px; }
   .composition__pic--cheese {
-    background-image: url(svg/cheese.svg);
     height: 34px;
     width: 36px; }
 

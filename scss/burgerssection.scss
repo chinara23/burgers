@@ -145,29 +145,23 @@ letter-spacing: -0.75px;
 .composition__pic {
     background-repeat: no-repeat;
     &--beef {
-        background-image: url(svg/beef.svg);
         width: 45px;
         height: 39px;
     }
     &--cucumber {
-        background-image: url(svg/cucumber.svg);
         width: 37px;
     }
     &--salad {
-        background-image: url(svg/salad.svg);
         width: 38px;
     }
     &--souce {
-        background-image: url(svg/sauce.svg);
         width: 41px;
     }
     &--buns{
-        background-image: url(svg/buns.svg);
         height: 30px;
         width: 45px;
     }
     &--cheese {
-        background-image: url(svg/cheese.svg);
         height: 34px;
         width: 36px;
     }
