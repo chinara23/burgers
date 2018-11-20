@@ -1274,9 +1274,9 @@ ul li {
   font-family: 'gagalinregular';
   font-weight: 400; }
 
-.composition__link {
-  text-decoration: none;
+.composition__button {
   width: 5.625rem;
+  border: none;
   height: 5.625rem;
   background-color: #eb8c38;
   border-radius: 5px;
@@ -1294,7 +1294,7 @@ ul li {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .composition__link:hover + .composition__hover {
+  .composition__button:hover + .composition__hover {
     display: block; }
 
 .composition, .kkal {
