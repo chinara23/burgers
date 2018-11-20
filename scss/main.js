@@ -1,6 +1,6 @@
 const hamburger = document.querySelector(".nav__burger-button");
 const fixedMenu = document.querySelector(".burgerclick");
-const closeMenu = document.querySelector("burgerclick__close");
+const closeMenu = document.querySelector("nav__burger-button__active");
 
 
     hamburger.addEventListener('click', function () {
