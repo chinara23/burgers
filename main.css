@@ -377,6 +377,9 @@ body {
   flex-wrap: wrap;
   text-transform: uppercase; }
 
+.burgerclick__content {
+  margin-top: 90px; }
+
 .burgerclick {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1474,3 +1477,15 @@ ul li {
   background: transparent;
   outline: none;
   background-repeat: no-repeat; }
+
+.slider__arrowss {
+  width: 2rem;
+  height: 2rem; }
+  .slider__arrowss--first {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .slider__arrowss--second {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }

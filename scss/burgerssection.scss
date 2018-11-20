@@ -247,3 +247,13 @@ letter-spacing: -0.75px;
     outline: none;
     background-repeat: no-repeat;
 }
+.slider__arrowss {
+    width: 2rem;
+    height: 2rem;
+    &--first {
+        transform: rotate(90deg);
+    }
+    &--second {
+        transform: rotate(-90deg);
+    }
+}
