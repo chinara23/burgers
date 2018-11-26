@@ -120,7 +120,7 @@ function accordionMenu() {
 
   menuAccord.addEventListener("click", event => {
       let target = event.target.parentNode;
-      let menu = target.parentNode;
+      let item = target.parentNode;
       let content = target.nextElementSibling;
 
       console.log(event.target);

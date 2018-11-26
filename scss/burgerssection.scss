@@ -204,6 +204,7 @@ letter-spacing: -0.75px;
 }
 .kkal {
     left: 0;
+    bottom: 0;
     @include tablets{
         right: 0;
         top: 0;

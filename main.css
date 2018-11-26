@@ -1494,7 +1494,8 @@ ul li {
   height: 60px; }
 
 .kkal {
-  left: 0; }
+  left: 0;
+  bottom: 0; }
   @media (max-width: 768px) {
     .kkal {
       right: 0;
