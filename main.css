@@ -1284,6 +1284,12 @@ ul li {
   @media (max-width: 480px) {
     .slide__pic {
       margin-top: 6.6875rem; } }
+  .slide__pic--chiken {
+    margin-top: 7.6875rem; }
+  .slide__pic--spicy {
+    margin-top: 2.6875rem; }
+  .slide__pic--cheeseburger {
+    margin-top: 6.6875rem; }
 
 .slide {
   display: -webkit-box;
@@ -1299,6 +1305,8 @@ ul li {
       -ms-flex-direction: column;
       flex-direction: column;
       text-align: center; } }
+  .slide__img {
+    width: 50%; }
 
 .slide__title {
   color: #ffffff;

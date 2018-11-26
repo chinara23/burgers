@@ -185,64 +185,64 @@ accordionMenu()
 
 ///////слайдер///////
 
-    const list = document.querySelector('.slider__list');
-    const widthContainer = document.querySelector ('.slider__wrap').clientWidth;
-    const arrows = document.querySelector('.slider__arrows');
-    var pos = 0;
-    
-    
-    function calcWidthList () {
-      const items = list.children.length;
-      const widthList = items * widthContainer;
-    
-      list.style.width = `${widthList}px`;
-      console.log(widthList);
-    }
-    
-    function buttonClick(event) {
-      if (event.target.tagName === 'BUTTON') {
-        slide(event.target);
-      }
-    }
-    
-    
-     function slide(target){
-      const vector = target.dataset.vector;
-      
-      switch(vector){
-        case 'right':
-          slideTo(vector);
-          break;
-        case  'left':
-          slideTo(vector);
-          break;
-      }
-    }
-    
-    function slider(vector){
-      const active = document.querySelector('active');
-      if(vector ==='right') {
-        var rightElement = active.nextElementSibling;
-      } else {
-        var leftElement = active.previousElementSibling;
-      }
-    
-      if(rightElement){
-        pos -= widthContainer;
-        active.classList.remove('active');
-        rightElement.classList.add('active');
-        translate(pos);
-      } else if (leftElement) {
-        pos += widthContainer;
-        active.classList.remove('active');
-        leftElement.classList.add('active');
-        translate(pos);
-      }
-    }
-    
-    function translate(pos){
-      list.style.transform = `translateX(${pos}px)`;
-    }  
+const list = document.querySelector(".slider__list");
+const widthContainer = document.querySelector('.slider__wrap').clientWidth;
+const control = document.querySelector('.slider__arrows');
+var pos = 0;
 
-    arrows.addEventListener('click', buttonClick);
-    window.addEventListener ('load', calcWidthList);;
+
+
+function calcWidthList() {
+    const itemCount = list.children.length;
+    const widthList = itemCount * widthContainer;
+    list.style.width = `${widthList}px`;
+}
+
+
+
+function handlerClick(event) {
+  console.log(event.target);
+    if (event.target.tagName === 'BUTTON') {
+        slide(event.target);
+    }
+}
+
+
+
+function slide(target) {
+    const vector = target.dataset.vector;
+    console.log(vector);
+    switch (vector) {
+        case 'right':
+            slideTo(vector);
+            break;
+        case 'left':
+            slideTo(vector);
+            break;
+    }
+}
+
+
+function slideTo(vector) {
+  if (vector === 'right') {
+    pos -= widthContainer;
+    translate(pos);
+  } else {
+    pos += widthContainer;
+    translate(pos);
+  }
+} 
+
+function translate(pos) {
+  list.style.transform = `translateX(${pos}px)`
+}
+
+
+
+
+
+
+
+control.addEventListener('click', handlerClick);
+
+window.addEventListener('load', calcWidthList);
