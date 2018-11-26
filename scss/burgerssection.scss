@@ -218,6 +218,7 @@ letter-spacing: -0.75px;
 }
 .slider__item{
     position: relative;
+    flex: 1;
 }
 .composition {
     top: 0;
@@ -236,7 +237,7 @@ letter-spacing: -0.75px;
 }
 .slider {
     position: relative;
-    width: 100%;
+    width: 100%;  
 }
 .slider__arrow{
     width: 1.875em;
@@ -257,3 +258,13 @@ letter-spacing: -0.75px;
         transform: rotate(-90deg);
     }
 }
+.slider__list {
+    display: flex;
+    transition: 1s;
+}
+.slider__wrap {
+    overflow: hidden;
+}
+
+
+           

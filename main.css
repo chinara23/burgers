@@ -466,12 +466,15 @@ body {
     transition: 1s; }
 
 .button--btn {
+  border: none;
+  outline: none;
   margin: 0 0 0 20px;
   width: 6.875rem;
   height: 2.1875rem;
   background-color: #2f3234;
-  line-height: 2.0625rem;
-  text-align: center; }
+  line-height: 1.0625rem;
+  text-align: center;
+  cursor: pointer; }
   @media (max-width: 480px) {
     .button--btn {
       display: none; } }
@@ -531,6 +534,8 @@ body {
   width: 100%; }
 
 .button--read {
+  white-space: nowrap;
+  font-size: 0.8125rem;
   display: none;
   background-color: #2f3234;
   width: 6.875rem;
@@ -540,6 +545,51 @@ body {
   @media (max-width: 480px) {
     .button--read {
       display: block; } }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(76, 82, 91, 0.8);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 10000; }
+
+.overlaycontainer {
+  position: relative;
+  width: 25rem;
+  min-height: 13.125rem;
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+  padding: 2rem 1.5rem; }
+
+.close {
+  color: red;
+  position: absolute;
+  top: 1rem;
+  font-size: 2rem;
+  right: 1.25rem;
+  text-decoration: none;
+  font-family: 'ubunturegular'; }
+
+.overlaytitle {
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  font-family: 'gagalinregular'; }
+
+.overlaycontent {
+  font-family: 'ubunturegular';
+  font-size: 0.8125rem; }
 
 .team {
   background-image: url(png/team.png);
@@ -605,9 +655,6 @@ li {
     margin-left: -1.4375rem;
     margin-top: 1.5625rem; }
 
-.team__link--active {
-  color: #f9b43b; }
-
 .team__link--before {
   content: '';
   display: block;
@@ -663,6 +710,33 @@ li {
   margin-left: 1.5625rem;
   width: 13rem;
   margin-top: -1.25rem; }
+
+.team__item--active .team__block {
+  height: 120px; }
+  @media (max-width: 768px) {
+    .team__item--active .team__block {
+      height: 180px; } }
+
+.team__item--active .team__link {
+  color: #f9b43b; }
+
+.team__item--active .team__link::before {
+  content: '';
+  display: block;
+  border: 0.37rem solid transparent;
+  border-bottom: 0.5rem solid #f9b43b;
+  position: absolute;
+  margin-left: -23px;
+  margin-top: 17px; }
+
+@media (max-width: 768px) {
+  .team__item--active .team__text-block {
+    width: 100%;
+    margin-left: 0; } }
+
+@media (max-width: 768px) {
+  .team__item--active .team__text {
+    width: 100%; } }
 
 .map__img {
   -o-object-fit: cover;
@@ -1073,15 +1147,14 @@ li {
   height: 650px;
   min-height: 100%; }
 
-.menu__content--active {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  background-color: #2f3133;
-  opacity: 0.9;
-  width: 0;
-  overflow: hidden;
-  height: 650px; }
+.menu__item--active .menu__subt {
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+  -webkit-transition-delay: .9s;
+  -o-transition-delay: .9s;
+  transition-delay: .9s; }
 
 .menu__subt {
   color: #fff;
@@ -1444,7 +1517,10 @@ ul li {
   right: 10px; }
 
 .slider__item {
-  position: relative; }
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
 
 .composition {
   top: 0; }
@@ -1489,3 +1565,14 @@ ul li {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg); }
+
+.slider__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.slider__wrap {
+  overflow: hidden; }
