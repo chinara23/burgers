@@ -120,7 +120,7 @@ function accordionMenu() {
 
   menuAccord.addEventListener("click", event => {
       let target = event.target.parentNode;
-      let menu = target.parentNode;
+      let item = target.parentNode;
       let content = target.nextElementSibling;
 
       console.log(event.target);
@@ -187,20 +187,20 @@ accordionMenu()
 
 const list = document.querySelector(".slider__list");
 const widthContainer = document.querySelector('.slider__wrap').clientWidth;
-const control = document.querySelector('.slider__arrows');
+const arrows = document.querySelector('.slider__arrows');
 var pos = 0;
 
 
 
 function calcWidthList() {
-    const itemCount = list.children.length;
-    const widthList = itemCount * widthContainer;
+    const items = list.children.length;
+    const widthList = items * widthContainer;
     list.style.width = `${widthList}px`;
 }
 
 
 
-function handlerClick(event) {
+function buttonClick(event) {
   console.log(event.target);
     if (event.target.tagName === 'BUTTON') {
         slide(event.target);
@@ -208,22 +208,21 @@ function handlerClick(event) {
 }
 
 
-
 function slide(target) {
     const vector = target.dataset.vector;
     console.log(vector);
     switch (vector) {
         case 'right':
-            slideTo(vector);
+            slider(vector);
             break;
         case 'left':
-            slideTo(vector);
+            slider(vector);
             break;
     }
 }
 
 
-function slideTo(vector) {
+function slider(vector) {
   if (vector === 'right') {
     pos -= widthContainer;
     translate(pos);
@@ -239,10 +238,6 @@ function translate(pos) {
 
 
 
-
-
-
-
-control.addEventListener('click', handlerClick);
+arrows.addEventListener('click', buttonClick);
 
 window.addEventListener('load', calcWidthList);
