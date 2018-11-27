@@ -794,46 +794,49 @@
         <section class="section order">
             <div class="container">
                 <h2 class="title title--order"> закажите доставку </h2>
-                <form action="" class="form">
+                <form class="form">
                     <div class="order__form">
                         <div class="order__block">
                             <label class="order__form-block">
                                 <div class="order__title">Имя</div>
-                                <input type="text" class="order__input">
+                                <input type="text" class="order__input" name="name" required>
+                                <div class="error"></div>
                             </label>
                             <label class="order__form-block">
                                 <div class="order__title">Телефон</div>
-                                <input type="text" class="order__input">
+                                <input type="text" class="order__input" name="phone" required>
+                                <div class="error"></div>
                             </label>
                         </div>
                         <div class="order__block">
                             <label class="order__form-block">
                                 <div class="order__title">Улица</div>
-                                <input type="text" class="order__input order__input--street">
+                                <input type="text" class="order__input order__input--street" name="street">
                             </label>
                         </div>
                         <div class="order__block">
                             <label class="order__form-block">
                                 <div class="order__title">Дом</div>
-                                <input type="text" class="order__input order__input--home ">
+                                <input type="text" class="order__input order__input--home" name="house">
                             </label>
                             <label class="order__form-block">
                                 <div class="order__title">Корпус</div>
-                                <input type="text" class="order__input order__input--home">
+                                <input type="text" class="order__input order__input--home" name="number" >
                             </label>
                             <label class="order__form-block">
                                 <div class="order__title">Квартира</div>
-                                <input type="text" class="order__input order__input--home">
+                                <input type="text" class="order__input order__input--home" name="apartment">
                             </label>
                             <label class="order__form-block">
                                 <div class="order__title">Этаж</div>
-                                <input type="text" class="order__input order__input--home">
+                                <input type="text" class="order__input order__input--home" name="floor">
                             </label>
                         </div>
                     </div>
                     <div class="comments">
                         <div class="order__title">Комментарий</div>
-                        <textarea type="text" class="comments__input"></textarea>
+                        <textarea type="text" name="comment" class="comments__input" required></textarea>
+                        <div class="error"></div>
                         <div class="payment">
                             <label class="payment__label">
                                 <input type="radio" name="pay" class="payment__input">
@@ -848,7 +851,7 @@
                         </div>
                         <div class="payments">
                             <label  class="payment__block">
-                                <input type="button" class=" payment__input-call">
+                                <input type="button"name="call" class="payment__input-call">
                                 <span class="order__title-pay">Не перезванивать</span>
                             </label>
                         </div>
@@ -864,7 +867,7 @@
                 </form>
             </div>
         </section>
-        <section class=" section maps">
+        <section class="section maps">
                 <img src="png/map.png" alt=" карта" class="map__img">
                 <footer class="map__footer">
                     <div class="container map__container">

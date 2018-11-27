@@ -1049,6 +1049,10 @@ li {
   outline: none;
   cursor: pointer; }
 
+.error {
+  color: red;
+  font-family: 'ubunturegular'; }
+
 .menu {
   background-image: url(png/menu.png);
   background-size: cover;
