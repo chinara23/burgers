@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link  href='normalize.css'  rel='stylesheet' type='text/css'>
     <link href='main.css' rel='stylesheet' type='text/css'>
+    
     <title> burger </title>
 </head> 
 <body> 
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+
+        </script>
     <div class="wrapper"> 
         <section class="section main">
             <div class="container main__container">
@@ -58,9 +62,9 @@
                 </div>
                 <div class="main__down">
                     <div class="maindown">
-                        <a href="#" class="main__down-link">
+                        <button class="main__down-link">
                             <div class="main__down-img"></div>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -868,7 +872,8 @@
             </div>
         </section>
         <section class="section maps">
-                <img src="png/map.png" alt=" карта" class="map__img">
+            <div class="map" id="map">
+            </div>
                 <footer class="map__footer">
                     <div class="container map__container">
                         <div class="map__info">

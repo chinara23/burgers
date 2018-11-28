@@ -343,7 +343,11 @@ body {
   margin-top: 1.875rem; }
 
 .main__down-link {
-  display: block; }
+  display: block;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none; }
 
 .main__down-img {
   background-image: url(svg/arrow.svg);

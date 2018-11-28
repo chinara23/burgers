@@ -97,7 +97,10 @@ function openOverlay(content, title) {
   closeElement.addEventListener("click", function() {
     document.body.removeChild(overlayElement);
   });
-
+  closeElement.addEventListener('click', function(event) {
+    event.preventDefault(); 
+  });  
+  
 
 
   overlayElement.appendChild(containerElement);
@@ -255,18 +258,14 @@ sendButton.addEventListener('click', function(event) {
       const data = {
         name: myForm.elements.name.value,
         phone: myForm.elements.phone.value,
-        street: myForm.elements.street.value,
-        house: myForm.elements.house.value,
-        call: myForm.elements.call.value,
-        floor: myForm.elements.floor.value,
         comment: myForm.elements.comment.value,
-        apartment: myForm.elements.apartment.value,
-        number: myForm.elements.number.value,
       };
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = "json";
     xhr.open( 'POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', function() {
       if(xhr.response.status) {
@@ -287,24 +286,6 @@ function validateForm(form){
   if (!validateField(form.elements.comment)) {
     valid = false; 
   }
-  if (!validateField(form.elements.street)) {
-    valid = false; 
-  }
-  if (!validateField(form.elements.house)) {
-    valid = false; 
-  }
-  if (!validateField(form.elements.floor)) {
-    valid = false; 
-  }
-  if (!validateField(form.elements.number)) {
-    valid = false; 
-  }
-  if (!validateField(form.elements.call)) {
-    valid = false; 
-  }
-  if (!validateField(form.elements.apartment)) {
-    valid = false; 
-  }
   return valid;
 }
 
@@ -320,22 +301,24 @@ function validateField(field) {
 
 
 
+//кнопка вниз//
+(function() {
+  'use strict';
 
+  var btnScrollDown = document.querySelector('.main__down-link');
 
+  function scrollDown() {
+    var windowCoords = document.documentElement.clientHeight;
+    (function scroll() {
+      if (window.pageYOffset < windowCoords) {
+        window.scrollBy(0, 10);
+        setTimeout(scroll, 0);
+      }
+      if (window.pageYOffset > windowCoords) {
+        window.scrollTo(0, windowCoords);
+      }
+    })();
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  btnScrollDown.addEventListener('click', scrollDown);
+})();
