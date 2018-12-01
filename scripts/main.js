@@ -413,21 +413,8 @@ function onYouTubeIframeAPIReady() {
         },
         events: {
           onReady: onPlayerReady,
-          onStateChange: onPlayerStateChange
         }
     });
-}
-
-
-function onPlayerStateChange(event) {
-switch(event.data) {
-  case 1:
-  $(".player__start").addClass("paused");
-  $(".player__wrapper").addClass('active')
-  break;
-  case 2: 
-  $(".player__start").remove('paused');
-}
 }
 
 
@@ -435,66 +422,90 @@ function onPlayerReady() {
   const duration = player.getDuration();
   let interval;
 
+
   clearInterval(interval);
   interval = setInterval(() => {
-    const completed = player.getCurrentTime();
-    const percent = (completed / duration) * 100;
+      const completed = player.getCurrentTime();
+      const percents = (completed / duration) * 100;
 
-    changeButtonPosition(percent);
-  },1000);
+      changeButtonPosition(percents);
+  }, 1000);
 }
+
 
 
 const playerStart = document.querySelector('.player__start');
-$(".player__start").on("click", e =>{
+$('.player__start').on("click", e => {
+  e .preventDefault()
   const block = $(e.currentTarget);
   const playerStatus = player.getPlayerState();
 
-  if (playerStatus !==1){
-    player.playVideo();
-    $('.player__start').addClass('paused');
+
+
+  if (playerStatus !== 1) {
+      player.playVideo();
+      $('.player__arrow').addClass('none');
+      $('.player__start').addClass('paused');
   } else {
-    player.pauseVideo();
-    $('.player__start').removeClass('paused')
-  }
+      player.pauseVideo();
+      $('.player__splash').removeClass('none');
+      $('.player__start').removeClass('paused');
+  } 
 });
 
-$('.player__back').on('click', e => {
-  const bar = $(e.currentTarget)
-  const newButtonPosition = e.pageX - bar.offset().left;
-  const clickedPercent = (newButtonPosition / bar.width()) *100;
-  const newPlayerTime = (player.getDuration() / 100) * clickedPercent;
 
-  player.seekTo(newPlayerTime);
-  changeButtonPosition(percent);
-})
 
 $('.player__arrow').on("click", e => {
+  e .preventDefault()
+  $('.player__arrow').addClass('none');
+  $('.player__start').addClass('paused');
   player.playVideo();
 });
 
-function changeButtonPosition(percent){
-  $('.player__back-button').css ({
-    left:`${percent}%`
-  });
-}
+
+
+$('.player__back').on('click', e => {
+  e.preventDefault()
+
+
+  const bar = $(e.currentTarget);
+
+
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const clickedPercents = (newButtonPosition / bar.width()) * 100;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
+
+
+  player.seekTo(newPlayerTime);
+  changeButtonPosition(percents);
+
+})
+
+
 
 $('.player__volume-line').on('click', e => {
   e.preventDefault()
+
 
   const volume = 100;
   const volumeLine = $(e.currentTarget);
 
 
   const newVolumePosition = e.pageX - volumeLine.offset().left;
-  const clickedVolumePercent = (newVolumePosition / volumeLine.width()) * 100;
-  const newVolume = (volume / 100) * clickedVolumePercent;
+  const clickedVolumePercents = (newVolumePosition / volumeLine.width()) * 100;
+  const newVolume = (volume / 100) * clickedVolumePercents;
 
 
   player.setVolume(newVolume);
   changeVolumePosition(newVolume);
-
 })
+
+
+function changeButtonPosition(percents) {
+  $('.player__back-button').css({
+      left: `${percents}%`
+  });
+}
 
 function changeVolumePosition(newVolume) {
   $('.player__volume-button').css({

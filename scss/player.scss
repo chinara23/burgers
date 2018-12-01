@@ -26,7 +26,10 @@
 .player__video {
     position: relative;
     margin-left: 135px;
-
+}
+.player__wrapper {
+    position: relative;
+    display: inline-block;
 }
 .youtubeplayer {
     position: relative;
