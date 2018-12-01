@@ -4,9 +4,8 @@
 .slide__pic {
     width: 100%;
     margin-top: 6.6875rem;
-    @include tablets{
-        margin-top: 0;
-        width: 60%;
+    @include tablets {
+        margin-left: 100px;
     }
     @include phones{
         margin-top: 6.6875rem;
@@ -32,6 +31,11 @@
         width: 50%;
     }
     
+}
+.slide__desc {
+    @include tablets {
+        width: 80%;
+    }
 }
 .slide__title {
 color: #ffffff;

@@ -184,65 +184,75 @@ function accordionMenu() {
 accordionMenu()
 
 
-
-
 ///////слайдер///////
 
 const list = document.querySelector(".slider__list");
 const widthContainer = document.querySelector('.slider__wrap').clientWidth;
-const arrows = document.querySelector('.slider__arrows');
+const controls = document.querySelector('.slider__arrows');
 var pos = 0;
 
 
-
 function calcWidthList() {
-    const items = list.children.length;
-    const widthList = items * widthContainer;
+    const itemCount = list.children.length;
+    const widthList = itemCount * widthContainer;
+
     list.style.width = `${widthList}px`;
 }
 
 
 
-function buttonClick(event) {
-  console.log(event.target);
+function handlerClick(event) {
     if (event.target.tagName === 'BUTTON') {
         slide(event.target);
     }
 }
 
 
+
 function slide(target) {
     const vector = target.dataset.vector;
-    console.log(vector);
+
     switch (vector) {
-        case 'right':
-            slider(vector);
+        case 'next':
+            slideTo(vector);
             break;
-        case 'left':
-            slider(vector);
+        case 'prev':
+            slideTo(vector);
             break;
     }
 }
 
 
-function slider(vector) {
-  if (vector === 'right') {
-    pos -= widthContainer;
-    translate(pos);
-  } else {
-    pos += widthContainer;
-    translate(pos);
-  }
-} 
 
-function translate(pos) {
-  list.style.transform = `translateX(${pos}px)`
+function slideTo(vector) {
+    const active = document.querySelector('.active');
+    if (vector === 'next') {
+        var nextElement = active.nextElementSibling;
+    } else {
+        var prevElement = active.previousElementSibling;
+    }
+
+
+
+    if (nextElement) {
+        pos -= widthContainer;
+        active.classList.remove('active');
+        nextElement.classList.add('active');
+        translate(pos);
+    } else if (prevElement) {
+        pos += widthContainer;
+        active.classList.remove('active');
+        prevElement.classList.add('active');
+        translate(pos);
+    }
 }
 
 
+function translate(pos) {
+    list.style.transform = `translateX(${pos}px)`;
+}
 
-arrows.addEventListener('click', buttonClick);
-
+controls.addEventListener('click', handlerClick);
 window.addEventListener('load', calcWidthList);
 
 
@@ -251,29 +261,71 @@ window.addEventListener('load', calcWidthList);
 const myForm = document.querySelector ('.form');
 const sendButton = document.querySelector('.payment__button');
 
-sendButton.addEventListener('click', function(event) {
-  event.preventDefault();
+sendButton.addEventListener('click', e => {
+  e.preventDefault();
 
   if (validateForm(myForm)) {
+    console.log('right');
       const data = {
         name: myForm.elements.name.value,
         phone: myForm.elements.phone.value,
         comment: myForm.elements.comment.value,
+        to: "mail@mail.ru"
       };
 
     const xhr = new XMLHttpRequest();
+    var openOverlayForm;
     xhr.responseType = "json";
     xhr.open( 'POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', function() {
-      if(xhr.response.status) {
-        console.log("Все ok!");
-        }
+      if (xhr.status === 200) {
+        document.body.appendChild(openOverlayForm(xhr.response.message));
+    } else {
+      document.body.appendChild(openOverlayForm(xhr.response.message));
+  }
     });
   }
-});
+
+
+
+  function openOverlayForm(content) {
+    const overlayElement = document.createElement("div");
+    overlayElement.classList.add("over-lay");
+    overlayElement.addEventListener("click", e => {
+      if (e.target === overlayElement) {
+      closeElement.click();
+      }
+    });
+
+    const containerElement = document.createElement("div");
+    containerElement.classList.add("overlay-container");
+
+
+    const contentElement = document.createElement("div");
+    contentElement.classList.add("overlay-content");
+    contentElement.innerHTML = content;
+
+
+    const closeElement = document.createElement("button");
+    closeElement.classList.add("button_close");
+    closeElement.textContent = "закрыть";
+    closeElement.addEventListener("click", function() {
+        document.body.removeChild(overlayElement);
+    });
+
+
+    overlayElement.appendChild(containerElement);
+    containerElement.appendChild(contentElement);
+    containerElement.appendChild(closeElement);
+
+    return overlayElement;
+
+}
+
+
 function validateForm(form){
   let valid = true;
 
@@ -289,36 +341,159 @@ function validateForm(form){
   return valid;
 }
 
-function validateField(field) {
-  if (!field.checkValidity()) {
-    field.nextElementSibling.textContent = field.validationMessage;
-    return false;
-  } else {
-    field.nextElementSibling.textContent = "";
-    return true;
-  }
+function validateField(formblock) {
+  formblock.nextElementSibling.textContent = formblock.validationMessage;
+  return formblock.checkValidity();
+}
+})
+
+
+
+//map//
+ymaps.ready(init);
+
+
+function init() {
+    var map = new ymaps.Map('map',{
+        center: [59.92, 30.32],
+        zoom:12,
+        controls:['zoomControl'],
+        behaviors: ['drag']
+    });
+
+    var placemark = new ymaps.Placemark([59.97, 30.31] , {
+        hintContent: 'BurgerShop'
+        } , {
+        iconImageHref: 'png/mapmarker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57],
+        iconLayout: 'default#image'
+    });
+
+    var placemark2 = new ymaps.Placemark([59.94, 30.38] , {
+        hintContent: 'BurgerShop'
+        } , {
+        iconLayout: 'default#image',
+        iconImageHref: 'png/mapmarker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
+
+    var placemark3 = new ymaps.Placemark([59.91, 30.49] , {
+        hintContent: 'BurgerShop'
+        } , {
+        iconLayout: 'default#image',
+        iconImageHref: 'png/mapmarker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
+
+    map.geoObjects.add(placemark);
+    map.geoObjects.add(placemark2);
+    map.geoObjects.add(placemark3);
+
 }
 
 
 
-//кнопка вниз//
-(function() {
-  'use strict';
+ //api video player//
+let player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player("youtubeplayer", {
+        width: "660",
+        height: "405",
+        videoId: "DY_RHowHIFs",
+        playerVars: {
+            controls: 0,
+            showinfo: 0,
+            autoplay: 0,
+            modestbranding: 0,
+            disablekb: 0,
+            rel: 0
+        },
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        }
+    });
+}
 
-  var btnScrollDown = document.querySelector('.main__down-link');
+function onPlayerStateChange(event) {
+switch(event.data) {
+  case 1:
+  $(".player__start").addClass("paused");
+  $(".player__wrapper").addClass('active')
+  break;
+  case 2: 
+  $(".player__start").remove('paused');
+}
+}
 
-  function scrollDown() {
-    var windowCoords = document.documentElement.clientHeight;
-    (function scroll() {
-      if (window.pageYOffset < windowCoords) {
-        window.scrollBy(0, 10);
-        setTimeout(scroll, 0);
-      }
-      if (window.pageYOffset > windowCoords) {
-        window.scrollTo(0, windowCoords);
-      }
-    })();
+
+function onPlayerReady() {
+  const duration = player.getDuration();
+  let interval;
+
+  clearInterval(interval);
+  interval = setInterval(() => {
+    const completed = player.getCurrentTime();
+    const percent = (completed / duration) * 100;
+
+    changeButtonPosition(percent);
+  },1000);
+}
+
+$(".player__start").on("click", e =>{
+  const playerStatus = player.getPlayerState();
+
+  if (playerStatus !==1){
+    player.playVideo();
+    $('.player__start').addClass('paused');
+  } else {
+    player.pauseVideo();
+    $('.player__start').removeClass('paused')
   }
+})
 
-  btnScrollDown.addEventListener('click', scrollDown);
-})();
+$('.player__back').on('click', e => {
+  const bar = $(e.currentTarget)
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const clickedPercent = (newButtonPosition / bar.width()) *100;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercent;
+
+  player.seekTo(newPlayerTime);
+  changeButtonPosition(percent);
+})
+
+$('.player__arrow').on("click", e => {
+  player.playVideo();
+});
+
+function changeButtonPosition(percent){
+  $('.player__back-button').css ({
+    left:`${percent}%`
+  });
+}
+
+$('.player__volume-line').on('click', e => {
+  e.preventDefault()
+
+  const volume = 100;
+  const volumeLine = $(e.currentTarget);
+
+
+  const newVolumePosition = e.pageX - volumeLine.offset().left;
+  const clickedVolumePercents = (newVolumePosition / volumeLine.width()) * 100;
+  const newVolume = (volume / 100) * clickedVolumePercents;
+
+
+  player.setVolume(newVolume);
+  changeVolumePosition(newVolume);
+
+})
+
+function changeVolumePosition(newVolume) {
+  $('.player__volume-button').css({
+      left: `${newVolume}%`
+  });
+}

@@ -187,3 +187,46 @@ line-height: rem(24px);
     color: red;
     font-family: 'ubunturegular';
 }
+.over-lay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(76, 82, 91, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.overlay-container {
+    width: 170px;
+    min-height: 80px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-content {
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-family: "ubunturegular";
+}
+.button_close {
+    padding: 3px 16px;
+    border-radius: 7px;
+    background: #e35028;
+    color: white;
+    border: none;
+    font-family: 'ubunturegular';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}

@@ -39,6 +39,14 @@ margin-left: rem(20px);
 .map__information {
     width: 50%;
 }
+.map {
+    height: 100px;
+    width: 100%;
+}
+#map {
+    height: 100%;
+    width: 100%;
+}
 .map__social-list {
     display: flex;
     padding-left: rem(270px);

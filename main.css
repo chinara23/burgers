@@ -205,6 +205,9 @@ body {
   line-height: 1.875rem;
   text-transform: uppercase; }
 
+.main-cintent {
+  height: 100%; }
+
 .navigation__item {
   list-style: none;
   display: -webkit-box;
@@ -786,6 +789,14 @@ li {
 .map__information {
   width: 50%; }
 
+.map {
+  height: 100px;
+  width: 100%; }
+
+#map {
+  height: 100%;
+  width: 100%; }
+
 .map__social-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1057,6 +1068,64 @@ li {
   color: red;
   font-family: 'ubunturegular'; }
 
+.over-lay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(76, 82, 91, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 10000; }
+
+.overlay-container {
+  width: 170px;
+  min-height: 80px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.overlay-content {
+  font-size: 14px;
+  margin-bottom: 16px;
+  font-family: "ubunturegular"; }
+
+.button_close {
+  padding: 3px 16px;
+  border-radius: 7px;
+  background: #e35028;
+  color: white;
+  border: none;
+  font-family: 'ubunturegular';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer; }
+
 .menu {
   background-image: url(png/menu.png);
   background-size: cover;
@@ -1287,8 +1356,7 @@ ul li {
   margin-top: 6.6875rem; }
   @media (max-width: 768px) {
     .slide__pic {
-      margin-top: 0;
-      width: 60%; } }
+      margin-left: 100px; } }
   @media (max-width: 480px) {
     .slide__pic {
       margin-top: 6.6875rem; } }
@@ -1315,6 +1383,10 @@ ul li {
       text-align: center; } }
   .slide__img {
     width: 50%; }
+
+@media (max-width: 768px) {
+  .slide__desc {
+    width: 80%; } }
 
 .slide__title {
   color: #ffffff;
@@ -1593,3 +1665,120 @@ ul li {
 
 .slider__wrap {
   overflow: hidden; }
+
+.player {
+  background-image: url(png/bgplayer.png);
+  background-size: cover; }
+
+.title__player {
+  color: #2e3133;
+  text-align: center;
+  margin-top: 0;
+  font-weight: 400; }
+
+.player__volume-line {
+  position: absolute;
+  background: #626262;
+  width: 3.75rem;
+  height: 7px;
+  cursor: pointer;
+  top: 15px;
+  right: 1.125rem; }
+
+.player__video {
+  position: relative;
+  margin-left: 135px; }
+
+.youtubeplayer {
+  position: relative; }
+
+.player__arrow {
+  position: absolute;
+  cursor: pointer;
+  background: transparent;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.player__control {
+  background: #3d3d3d;
+  position: absolute;
+  bottom: 4px;
+  opacity: 1;
+  width: 41.25rem;
+  left: 0;
+  right: 0;
+  height: 2.425rem; }
+
+.player__start {
+  border: none;
+  cursor: pointer;
+  line-height: 0;
+  position: absolute;
+  top: 5px;
+  padding: 0;
+  background: transparent; }
+
+.player__volume-icon {
+  fill: #616161;
+  background-color: #3d3d3d; }
+
+.player__back {
+  position: absolute;
+  height: 7px;
+  top: 15px;
+  cursor: pointer;
+  width: 27.875rem;
+  background: #626262;
+  left: 3.75rem; }
+
+.player__volume-icon {
+  width: 2.1rem;
+  height: 2.1rem; }
+
+.player__volume {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  border: none;
+  line-height: 0;
+  padding: 0;
+  right: 5.625rem; }
+
+.player__back-button {
+  background: #626262;
+  border-radius: 50%;
+  border: none;
+  width: 0.82rem;
+  height: 0.82rem;
+  position: absolute;
+  padding: 0;
+  cursor: pointer;
+  top: -3px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.player__volume-button {
+  background: #626262;
+  border-radius: 50%;
+  border: none;
+  width: 0.82rem;
+  height: 0.82rem;
+  position: absolute;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -3px; }
