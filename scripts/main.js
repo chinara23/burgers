@@ -418,6 +418,7 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
+
 function onPlayerStateChange(event) {
 switch(event.data) {
   case 1:
@@ -443,7 +444,10 @@ function onPlayerReady() {
   },1000);
 }
 
+
+const playerStart = document.querySelector('.player__start');
 $(".player__start").on("click", e =>{
+  const block = $(e.currentTarget);
   const playerStatus = player.getPlayerState();
 
   if (playerStatus !==1){
@@ -453,7 +457,7 @@ $(".player__start").on("click", e =>{
     player.pauseVideo();
     $('.player__start').removeClass('paused')
   }
-})
+});
 
 $('.player__back').on('click', e => {
   const bar = $(e.currentTarget)
@@ -483,8 +487,8 @@ $('.player__volume-line').on('click', e => {
 
 
   const newVolumePosition = e.pageX - volumeLine.offset().left;
-  const clickedVolumePercents = (newVolumePosition / volumeLine.width()) * 100;
-  const newVolume = (volume / 100) * clickedVolumePercents;
+  const clickedVolumePercent = (newVolumePosition / volumeLine.width()) * 100;
+  const newVolume = (volume / 100) * clickedVolumePercent;
 
 
   player.setVolume(newVolume);
