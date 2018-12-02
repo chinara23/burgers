@@ -426,9 +426,9 @@ function onPlayerReady() {
   clearInterval(interval);
   interval = setInterval(() => {
       const completed = player.getCurrentTime();
-      const percents = (completed / duration) * 100;
+      const percent = (completed / duration) * 100;
 
-      changeButtonPosition(percents);
+      changeButtonPosition(percent);
   }, 1000);
 }
 
@@ -448,7 +448,7 @@ $('.player__start').on("click", e => {
       $('.player__start').addClass('paused');
   } else {
       player.pauseVideo();
-      $('.player__splash').removeClass('none');
+      $('.player__arrow').removeClass('none');
       $('.player__start').removeClass('paused');
   } 
 });
