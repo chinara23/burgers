@@ -1805,22 +1805,26 @@ ul li {
   transform: translateX(-50%);
   top: -3px; }
 
+.player .none {
+  display: none; }
+
 .player .paused {
   width: 5px;
   border: transparent;
   border-radius: 5px;
   height: 1.375rem;
   cursor: pointer;
-  color: #616161;
+  background: #616161;
   top: 0.625rem;
   left: 1.25rem; }
-
-.player .paused::before {
-  width: 5px;
-  border: transparent;
-  border-radius: 5px;
-  height: 1.375rem;
-  cursor: pointer;
-  color: #616161;
-  top: 0;
-  left: 0.5625rem; }
+  .player .paused .player__start-icon {
+    display: none; }
+  .player .paused ::before {
+    width: 5px;
+    border: transparent;
+    border-radius: 5px;
+    height: 1.375rem;
+    cursor: pointer;
+    color: #616161;
+    top: 0;
+    left: 0.5625rem; }
