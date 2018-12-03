@@ -391,10 +391,7 @@ function init() {
     map.geoObjects.add(placemark);
     map.geoObjects.add(placemark2);
     map.geoObjects.add(placemark3);
-
 }
-
-
 
  //api video player//
 let player;
@@ -472,12 +469,12 @@ $('.player__back').on('click', e => {
 
 
   const newButtonPosition = e.pageX - bar.offset().left;
-  const clickedPercents = (newButtonPosition / bar.width()) * 100;
-  const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
+  const clickedPercent = (newButtonPosition / bar.width()) * 100;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercent;
 
 
   player.seekTo(newPlayerTime);
-  changeButtonPosition(percents);
+  changeButtonPosition(percent);
 
 })
 
@@ -492,8 +489,8 @@ $('.player__volume-line').on('click', e => {
 
 
   const newVolumePosition = e.pageX - volumeLine.offset().left;
-  const clickedVolumePercents = (newVolumePosition / volumeLine.width()) * 100;
-  const newVolume = (volume / 100) * clickedVolumePercents;
+  const clickedVolumePercent = (newVolumePosition / volumeLine.width()) * 100;
+  const newVolume = (volume / 100) * clickedVolumePercent;
 
 
   player.setVolume(newVolume);
@@ -501,9 +498,9 @@ $('.player__volume-line').on('click', e => {
 })
 
 
-function changeButtonPosition(percents) {
+function changeButtonPosition(percent) {
   $('.player__back-button').css({
-      left: `${percents}%`
+      left: `${percent}%`
   });
 }
 
@@ -512,3 +509,127 @@ function changeVolumePosition(newVolume) {
       left: `${newVolume}%`
   });
 }
+
+
+//кнопка вниз//
+(function() {
+  'use strict';
+
+  var btnScrollDown = document.querySelector('.main__down-link');
+
+  function scrollDown() {
+    var windowCoords = document.documentElement.clientHeight;
+    (function scroll() {
+      if (window.pageYOffset < windowCoords) {
+        window.scrollBy(0, 10);
+        setTimeout(scroll, 0);
+      }
+      if (window.pageYOffset > windowCoords) {
+        window.scrollTo(0, windowCoords);
+      }
+    })();
+  }
+
+  btnScrollDown.addEventListener('click', scrollDown);
+})();
+
+//onePage scroll//
+(function () {
+  const wrapper = document.querySelector('.wrapper');
+  const container = document.querySelector('.main-content');
+  const nav = document.querySelector('.switcher');
+  const down = document.querySelector('.maindown');
+
+
+  const duration = 1500;
+  let posY = 0;
+  let isAmimate = false
+
+
+
+
+
+  window.addEventListener('wheel', handlerWheel);
+  nav.addEventListener('click', handlerClick);
+  
+
+  function handlerClick(e) {
+      e.preventDefault();
+
+
+      if (e.target.tagName === 'A') {
+          const index = e.target.getAttribute('href');
+          const [active, activenav, activemenu] = getActives();
+
+
+          reActive(false, active, 'section', null, index);
+          reActive(false, activenav, 'switcher__item', null, index);
+
+          
+
+          posY = index;
+          translate(posY);
+      }
+  }
+
+  function handlerWheel(e) {
+      if (isAmimate) return;
+      if (e.deltaY > 0) {
+          const isNext = isSlide('next');
+          slideTo(isNext, 'next');
+      } else {
+          const isPrev = isSlide('previous');
+          slideTo(isPrev, 'prev');
+      }
+  }
+
+  function slideTo(resolve, vector) {
+      if (vector === 'next' && resolve) {
+          posY++;
+         translate(posY);
+
+      }
+      if (vector === 'prev' && resolve) {
+          posY--;
+          translate(posY);
+      }
+  }
+
+  function translate(pos) {
+      container.style.transform = `translate3d(0, ${-pos * 100}%,0)`;
+      container.style.transition = `all ${duration}ms ease 0s`;
+      isAmimate = true
+      setTimeout(() => {
+          isAmimate = false;
+      }, duration)
+  }
+
+  function isSlide(vector) {
+      const [active, activenav] = getActives()
+
+
+      if (active[`${vector}ElementSibling`]) {
+          reActive(true, active, 'section', vector);
+          reActive(true, activenav, 'switcher__item', vector);
+          return true
+      }
+  }
+
+  function reActive(isSibling, elem, _class, vector, index) {
+
+      if (isSibling) {
+          elem.classList.remove(`${_class}_active`);
+          elem[`${vector}ElementSibling`].classList.add(`${_class}_active`);
+      } else {
+          elem.classList.remove(`${_class}_active`);
+          document.querySelectorAll(`.${_class}`)[index].classList.add(`${_class}_active`);
+      }
+  }
+
+  function getActives() {
+      const active = document.querySelector('.section_active');
+      const activenav = document.querySelector('.switcher__item_active');
+      return [active, activenav];
+  }
+
+})();
