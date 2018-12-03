@@ -536,6 +536,7 @@ function changeVolumePosition(newVolume) {
 //onePage scroll//
 
 (function () {
+  const wrapper = document.querySelector('.wrapper');
   const container = document.querySelector('.main-content');
   const nav = document.querySelector('.switcher');
   const menu = document.querySelector('.navigation__list');
@@ -693,5 +694,7 @@ function menuHandlerClick(e) {
       const activenav = document.querySelector('.switcher__item_active');
       return [active, activenav];
   }
+
+  
 
 })();

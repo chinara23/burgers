@@ -50,7 +50,7 @@ body {
 .wrapper {
   position: relative;
   overflow: hidden;
- }
+  min-height: 100%; }
 
 @font-face {
   font-family: 'lifehackmedium';
@@ -1348,6 +1348,9 @@ ul li {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
+.switcher__item_active .switcher__item-link::before {
+  opacity: 1; }
+
 .burgers {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
   background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
@@ -1362,7 +1365,9 @@ ul li {
       margin-left: 100px; } }
   @media (max-width: 480px) {
     .slide__pic {
-      margin-top: 6.6875rem; } }
+      margin-top: 6.6875rem;
+      margin-left: 0;
+      padding: 0 30px; } }
   .slide__pic--chiken {
     margin-top: 7.6875rem; }
   .slide__pic--spicy {
@@ -1583,6 +1588,9 @@ ul li {
     .kkal {
       right: 0;
       top: 0; } }
+  @media (max-width: 480px) {
+    .kkal {
+      right: 70px; } }
 
 .kkal__icon {
   display: -webkit-box;

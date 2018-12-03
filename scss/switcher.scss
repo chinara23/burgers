@@ -96,3 +96,6 @@
      top: 0;
      transform: rotate(-45deg);
  }
+ .switcher__item_active .switcher__item-link::before {
+    opacity: 1; 
+}
