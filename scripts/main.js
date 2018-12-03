@@ -534,12 +534,13 @@ function changeVolumePosition(newVolume) {
 })();
 
 //onePage scroll//
+
 (function () {
-  const wrapper = document.querySelector('.wrapper');
   const container = document.querySelector('.main-content');
   const nav = document.querySelector('.switcher');
-  const down = document.querySelector('.maindown');
-
+  const menu = document.querySelector('.navigation__list');
+  const burgerClick = document.querySelector('.burgerclick__list');
+  const orderButton = document.querySelectorAll('.button--knock');
 
   const duration = 1500;
   let posY = 0;
@@ -547,11 +548,72 @@ function changeVolumePosition(newVolume) {
 
 
 
-
-
   window.addEventListener('wheel', handlerWheel);
   nav.addEventListener('click', handlerClick);
+  menu.addEventListener('click', menuHandlerClick);
+  burgerClick.addEventListener('click', burgerClickHandlerClick);
+ 
   
+
+  function burgerClickHandlerClick(e) {
+    e.preventDefault();
+
+
+    if (e.target.tagName === 'A') {
+
+        
+        const index = e.target.getAttribute('href');
+        const [active, activenav, activemenu, activetabletMenu] = getActives();
+
+        reActive(false, active, 'section', null, index);
+        reActive(false, activenav, 'switcher__item', null, index);
+
+        
+        posY = index;
+        translate(posY);
+    }
+}
+
+  for (btn of orderButton) {
+    btn.addEventListener('click', buttonHandlerClick);
+}
+
+
+
+function buttonHandlerClick(e) {
+    e.preventDefault();
+    if (e.target.tagName === 'A') {
+        const index = e.target.getAttribute('href');
+        const [active, activenav,  activebutton] = getActives();
+
+
+        reActive(false, active, 'section', null, index);
+        reActive(false, activenav, 'switcher__item', null, index);
+        
+        posY = index;
+        translate(posY);
+    }
+}
+
+function menuHandlerClick(e) {
+  e.preventDefault();
+
+
+  if (e.target.tagName === 'A') {
+
+      
+      const index = e.target.getAttribute('href');
+      const [active, activenav, activemenu] = getActives();
+
+
+      reActive(false, active, 'section', null, index);
+      reActive(false, activenav, 'switcher__item', null, index);
+      
+      posY = index;
+      translate(posY);
+
+  }
+}
 
   function handlerClick(e) {
       e.preventDefault();
