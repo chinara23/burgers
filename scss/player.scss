@@ -137,17 +137,22 @@ top: -3px;
         .player__start-icon {
             display: none;
         }
-        ::before {
-            width: 5px;
-            border: transparent;
-            border-radius: 5px;
-            height: 1.375rem;
-            cursor: pointer;
-            background: #616161;
-            top: 0;
-            left: 0.5625rem;
-        }
+       
     }
+}
+.player .paused::before {
+    content: "";
+      display: block;
+      width: 5px;
+      border-radius:5px;
+      height: 1.375rem;
+      background: #616161;
+      border: transparent;
+      position: absolute;
+      left: 0.5625rem;
+      top: 0;
+      cursor: pointer;
+     
 }
 
 
