@@ -212,7 +212,7 @@ letter-spacing: -0.75px;
     left: 0;
     bottom: 0;
     @include tablets{
-        right: 0;
+        right: 60px;
         top: 0;
     }
     @include phones {

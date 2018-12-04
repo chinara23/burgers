@@ -511,37 +511,17 @@ function changeVolumePosition(newVolume) {
 }
 
 
-//кнопка вниз//
-(function() {
-  'use strict';
 
-  var btnScrollDown = document.querySelector('.main__down-link');
-
-  function scrollDown() {
-    var windowCoords = document.documentElement.clientHeight;
-    (function scroll() {
-      if (window.pageYOffset < windowCoords) {
-        window.scrollBy(0, 10);
-        setTimeout(scroll, 0);
-      }
-      if (window.pageYOffset > windowCoords) {
-        window.scrollTo(0, windowCoords);
-      }
-    })();
-  }
-
-  btnScrollDown.addEventListener('click', scrollDown);
-})();
 
 //onePage scroll//
 
 (function () {
-  const wrapper = document.querySelector('.wrapper');
-  const container = document.querySelector('.main-content');
+  const container = document.querySelector('.wrapper');
   const nav = document.querySelector('.switcher');
   const menu = document.querySelector('.navigation__list');
   const burgerClick = document.querySelector('.burgerclick__list');
   const orderButton = document.querySelectorAll('.button--knock');
+  const mainDown = document.querySelector('.main__down-link')
 
   const duration = 1500;
   let posY = 0;
@@ -553,8 +533,27 @@ function changeVolumePosition(newVolume) {
   nav.addEventListener('click', handlerClick);
   menu.addEventListener('click', menuHandlerClick);
   burgerClick.addEventListener('click', burgerClickHandlerClick);
+  mainDown.addEventListener('click', downHandlerClick);
  
-  
+  function downHandlerClick(e) {
+    e.preventDefault();
+
+
+    if (e.target.parentNode.tagName === "A") {
+        
+
+        const index = e.target.parentNode.getAttribute('href');
+        const [active, activenav] = getActives();
+
+
+        reActive(false, active, 'section', null, index);
+        reActive(false, activenav, 'switcher__item', null, index);
+
+        
+        posY = index;
+        translate(posY);
+    }
+}
 
   function burgerClickHandlerClick(e) {
     e.preventDefault();
