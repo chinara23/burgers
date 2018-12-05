@@ -1,6 +1,20 @@
 ////бургер меню////////
+var navburlink = document.querySelector('.nav__burger-button');
+var navadapt = document.querySelector('.burgerclick');
+navburlink.addEventListener('click', toggleClass);
 
-const hamburger = document.querySelector(".nav__burger-button");
+
+var navadaptlink = document.querySelectorAll ("a.burgerclick__link");
+for (var link of navadaptlink){
+	link.addEventListener('click', toggleClass);
+}
+function toggleClass() {
+    navburlink.classList.toggle("nav__burger-button__active");
+    navadapt.classList.toggle("burgerclick_active");
+}
+
+
+/*const hamburger = document.querySelector(".nav__burger-button");
 const fixedMenu = document.querySelector(".burgerclick");
 
 
@@ -9,7 +23,7 @@ const fixedMenu = document.querySelector(".burgerclick");
     document.body.classList.toggle('scroll-block');
     hamburger.classList.toggle("nav__burger-button__active");
 
-  });
+  });*/
  
 
   
@@ -521,7 +535,8 @@ function changeVolumePosition(newVolume) {
   const menu = document.querySelector('.navigation__list');
   const burgerClick = document.querySelector('.burgerclick__list');
   const orderButton = document.querySelectorAll('.button--knock');
-  const mainDown = document.querySelector('.main__down-link')
+  const mainDown = document.querySelector('.main__down-link');
+
 
   const duration = 1500;
   let posY = 0;
@@ -574,10 +589,7 @@ function changeVolumePosition(newVolume) {
     }
 }
 
-  for (btn of orderButton) {
-    btn.addEventListener('click', buttonHandlerClick);
-}
-
+ 
 
 
 function buttonHandlerClick(e) {
@@ -593,6 +605,9 @@ function buttonHandlerClick(e) {
         posY = index;
         translate(posY);
     }
+}
+for (btn of orderButton) {
+  btn.addEventListener('click', buttonHandlerClick);
 }
 
 function menuHandlerClick(e) {
@@ -693,7 +708,4 @@ function menuHandlerClick(e) {
       const activenav = document.querySelector('.switcher__item_active');
       return [active, activenav];
   }
-
-  
-
 })();

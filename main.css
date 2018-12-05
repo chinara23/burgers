@@ -184,6 +184,10 @@ body {
   -ms-flex-pack: start;
   justify-content: flex-start; }
 
+@media (max-width: 480px) {
+  .section {
+    height: auto; } }
+
 .header {
   margin-top: 10px;
   display: -webkit-box;
@@ -1350,6 +1354,11 @@ ul li {
 
 .switcher__item_active .switcher__item-link::before {
   opacity: 1; }
+
+.burgerclick_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .burgers {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));

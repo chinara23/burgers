@@ -9,6 +9,11 @@
  }
  .main__container {
     justify-content: flex-start;
+ } 
+ .section {
+     @include phones {
+         height: auto;
+     }
  }
  .header {
      margin-top: 10px;
