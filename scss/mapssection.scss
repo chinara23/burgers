@@ -6,7 +6,7 @@
 .map__footer {
     position: absolute;
     bottom: 0;
-    background-image: url(png/bg.png);
+    background-image: url(images/png/bg.png);
     width: 100%;
     height: rem(60px);
     display: flex;
@@ -69,13 +69,13 @@ margin-left: rem(20px);
 .social__icon {
     width: rem(20px);
     height: rem(30px);
-    fill: #575757;
+    fill: #575757; 
     &:hover {
         fill: white;
     }
 }
 .map__fake {
-    background-image: url(svg/phone.svg); 
+    background-image: url(images/svg/phone.svg); 
     height: 0.75rem;
     width: 0.9375rem;
     background-repeat: no-repeat;

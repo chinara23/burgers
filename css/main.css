@@ -1,4 +1,4 @@
-@import url(scss/normalize.css);
+@import url(normalize.css);
 @font-face {
   font-family: 'ubunturegular';
   src: url("fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("fonts/ubuntu-regular-webfont.woff") format("woff");

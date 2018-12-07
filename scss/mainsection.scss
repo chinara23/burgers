@@ -1,6 +1,6 @@
 
  .main {
-     background:url(png/burgersmain.png);
+     background:url(images/png/burgersmain.png);
      background-size: cover;
  }
  .section {
@@ -15,7 +15,7 @@
          height: auto;
      }
  }
- .header {
+ .header { 
      margin-top: 10px;
      display: flex;
      align-items: center;
@@ -148,7 +148,7 @@
     }
 }
 .main__down {
-    width: 1.875rem;
+    width: 1.875rem; 
     height: 0.9375rem;
     align-self: center;
     margin-top: 1.875rem;
@@ -162,7 +162,7 @@
     
 }
 .main__down-img {
-    background-image: url(svg/arrow.svg);
+    background-image: url(images/svg/arrow.svg);
     width: 1.875rem;
     height: 0.9375rem;
     background-repeat: no-repeat;

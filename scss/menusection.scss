@@ -1,5 +1,5 @@
 .menu {
-    background-image: url(png/menu.png);
+    background-image: url(images/png/menu.png);
     background-size: cover;
     display: flex;
 }
@@ -14,11 +14,11 @@
         font-size: rem(50px);
     }
 }
-.menu__list {
+.menu__list { 
     display: flex;
     margin: 0;
     position: absolute;
-    right: 0;
+    right: 0; 
 }
 .menu__button {
     display: flex;

@@ -1,5 +1,5 @@
 .best {
-    background: url(png/bestbg.png) center center /cover  no-repeat;
+    background: url(images/png/bestbg.png) center center /cover  no-repeat;
 
 }
 .best__title {
@@ -69,12 +69,12 @@ text-align: center;
     font-weight: 300;
 }
 .best__img {
-    background-position: center;
+    background-position: center; 
     background-repeat: no-repeat; 
     padding-left: rem(200px);
 
     &--salat {
-    background-image: url(svg/natural.svg);
+    background-image: url(images/svg/natural.svg);
     height: rem(75px);
     width: rem(88px);
     @include phones {
@@ -83,7 +83,7 @@ text-align: center;
     }
 
     &--hand {
-    background-image: url(svg/hand.svg);
+    background-image: url(images/svg/hand.svg);
     height: rem(85px);
     width: rem(73px);
     @include phones {
@@ -92,7 +92,7 @@ text-align: center;
     }
 
     &--meat {
-    background-image: url(svg/meat.svg);
+    background-image: url(images/svg/meat.svg);
     height: rem(89px);
     width: rem(97px);
     @include phones {
